@@ -3,491 +3,646 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Sample Cafe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>AK Digital Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
   <script>
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    // 🏪 RESTAURANT INFO
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     const RESTAURANT = {
-      name: "AK Digital Marketing",
-      tagline: "Digital Menu",
-      address: "Adama, Ethiopia",
-      phone: "+251 933xxxxxx",
-      email: "hello@sample.et",
-      hours: "Mon–Sun: 8:00 AM – 10:00 PM",
-      instagram: "@sample123",
-      telebirrNumber: "+251 933xxxxxx",
-      telebirrName: "sample Cafe",
-      cbeAccount: "1000 4xxxxxxxxxxxx3",
-      cbeName: "Sample Cafe PLC",
-      cbeBranch: "posta bet, Adama",
+      name:"AK Digital Marketing", tagline:"Digital Menu",
+      address:"Adama, Ethiopia", phone:"+251 933xxxxxx",
+      email:"hello@sample.et", hours:"Mon–Sun: 8:00 AM – 10:00 PM",
+      instagram:"@sample123", telebirrNumber:"+251 933xxxxxx",
+      telebirrName:"sample Cafe", cbeAccount:"1000 4xxxxxxxxxxxx3",
+      cbeName:"Sample Cafe PLC", cbeBranch:"posta bet, Adama",
     };
 
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    // 🎨 COLORS
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    const COLORS = {
-      accent: "#867C70",
-      accentLight: "#E8A87C",
-    };
-
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    // ☕ MENU DATA
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    /* ─── MENU DATA with real photos ─── */
     const MENU = [
       {
-        category: "Hot Drinks", categoryKey: "hot", categoryEmoji: "",
-        items: [
-          { name: "Espresso",       price: 80,  desc: "Bold and rich single shot of pure Ethiopian espresso.",              emoji: "☕", tags: ["Popular"] },
-          { name: "Macchiato",      price: 100, desc: "Espresso 'stained' with a dash of velvety steamed milk.",           emoji: "☕", tags: ["Popular"] },
-          { name: "Cappuccino",     price: 200, desc: "Equal parts espresso, steamed milk, and silky milk foam.",          emoji: "☕", tags: [] },
-          { name: "Hot Chocolate",  price: 200, desc: "Rich, creamy hot chocolate made with real cocoa.",                  emoji: "🍫", tags: ["Fasting"] },
-          { name: "Mocha",          price: 240, desc: "Espresso blended with chocolate and steamed milk.",                 emoji: "☕", tags: [] },
-          { name: "Matcha Latte",   price: 270, desc: "Premium ceremonial matcha with creamy steamed milk.",              emoji: "🍵", tags: ["New"] },
-          { name: "Milk",           price: 95,  desc: "Fresh warm whole milk.",                                            emoji: "🥛", tags: [] },
-          { name: "Tea",            price: 50,  desc: "Classic black tea, perfectly steeped.",                             emoji: "🫖", tags: [] },
-          { name: "Hibiscus Tea",   price: 60,  desc: "Vibrant floral hibiscus tea, sweet and tangy.",                    emoji: "🌺", tags: ["Fasting"] },
-          { name: "Special Tea",    price: 110, desc: "Our house blend of aromatic spiced tea.",                          emoji: "🫖", tags: ["Signature"] },
-          { name: "Special Tea XL", price: 130, desc: "Larger serving of our signature spiced tea blend.",               emoji: "🫖", tags: ["Signature"] },
+        category:{ en:"Hot Drinks", am:"ሞቃት መጠጦች", om:"Dhugaatii Ho'aa" }, categoryKey:"hot",
+        items:[
+          { price:80,  tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&h=600&fit=crop&q=80",
+            en:{name:"Espresso",      desc:"Bold and rich single shot of pure Ethiopian espresso, extracted to perfection with a golden crema."},
+            am:{name:"ኤስፕሬሶ",        desc:"ጥሩ እና ኃይለኛ የኢትዮጵያ ኤስፕሬሶ ነጠላ ቅምጥ፣ ሙሉ ጣዕሙ ይገለጻል።"},
+            om:{name:"Espresso",      desc:"Shot tokko cimaa fi mi'aa bunaa Itoophiyaa, bilchinaan baafame."} },
+          { price:100, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1485808191679-5f86510bd9d4?w=600&h=600&fit=crop&q=80",
+            en:{name:"Macchiato",     desc:"Espresso marked with a velvety dash of steamed milk, strong yet smooth."},
+            am:{name:"ማኪያቶ",         desc:"ኤስፕሬሶ ላይ ቀጭን የሚተን ወተት ያለው፣ ጠንካራ ግን ለስላሳ።"},
+            om:{name:"Macchiato",     desc:"Espresso irra aannan ho'aa velvet xiqqoo naqame, cimaa garuu laafaa."} },
+          { price:200, tags:[],
+            img:"https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=600&h=600&fit=crop&q=80",
+            en:{name:"Cappuccino",    desc:"Equal parts espresso, steamed milk and silky foam — a café classic."},
+            am:{name:"ካፑቺኖ",         desc:"ኤስፕሬሶ፣ ሞቃት ወተት እና ለስላሳ አረፋ — ቤተ-ቡና ክላሲክ።"},
+            om:{name:"Cappuccino",    desc:"Espresso, aannan ho'aa fi bubbee laafaa — classic café."} },
+          { price:200, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&h=600&fit=crop&q=80",
+            en:{name:"Hot Chocolate", desc:"Rich, creamy hot chocolate made with real cocoa — comforting and indulgent."},
+            am:{name:"ሞቃት ቸኮሌት",    desc:"እውነተኛ ኮኮዋ ተጠቅሞ የተሠራ ሞቃትና ክሬሚ ቸኮሌት — ሙቀት ሰጪ።"},
+            om:{name:"Chokolaatii Ho'aa",desc:"Chokolaatii dhugaa fi mi'aa kremii, kokoo irraa hojjetame."} },
+          { price:240, tags:[],
+            img:"https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&h=600&fit=crop&q=80",
+            en:{name:"Mocha",         desc:"Espresso blended with premium chocolate and steamed milk, dusted with cocoa."},
+            am:{name:"ሞካ",            desc:"ኤስፕሬሶ ፕሪሚዬም ቸኮሌት እና ሞቃት ወተት ጋር ተቀላቅሎ ኮኮዋ ነጭቷል።"},
+            om:{name:"Mocha",         desc:"Espresso chokolaatii ol'aanaa fi aannan ho'aa waliin masakame."} },
+          { price:270, tags:["New"],
+            img:"https://images.unsplash.com/photo-1515823662972-da6a2ab8a6e3?w=600&h=600&fit=crop&q=80",
+            en:{name:"Matcha Latte",  desc:"Premium ceremonial-grade matcha whisked with silky steamed oat milk."},
+            am:{name:"ማቻ ላቴ",        desc:"ፕሪሚዬም ሴሪሞኒያል ማቻ ከሲልኪ ሞቃት ወተት ጋር ተቀላቅሏል።"},
+            om:{name:"Matcha Latte",  desc:"Matcha ol'aanaa ceremonial fi aannan ho'aa kremii waliin."} },
+          { price:95,  tags:[],
+            img:"https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&h=600&fit=crop&q=80",
+            en:{name:"Warm Milk",     desc:"Fresh whole milk gently steamed to the perfect sipping temperature."},
+            am:{name:"ሞቃት ወተት",     desc:"ትኩስ ጠቅላላ ወተት ቀስ ብሎ ለሙቀት ተስተካክሏል።"},
+            om:{name:"Aannan Ho'aa",  desc:"Aannan haaraa guutuu ho'oo sirrii irratti ho'ifame."} },
+          { price:50,  tags:[],
+            img:"https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&h=600&fit=crop&q=80",
+            en:{name:"Tea",           desc:"Classic black tea, hand-selected and perfectly steeped to a deep amber."},
+            am:{name:"ሻይ",            desc:"ክላሲክ ጥቁር ሻይ፣ በሙሉ ቀለሙ ፍጹም ተቀምጧል።"},
+            om:{name:"Shaayii",       desc:"Shaayii gurraachaa sirriitti danfifame."} },
+          { price:60,  tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1597481499750-3e6b22637536?w=600&h=600&fit=crop&q=80",
+            en:{name:"Hibiscus Tea",  desc:"Vibrant dried hibiscus flowers steeped into a sweet-tart ruby infusion."},
+            am:{name:"ሂቢስከስ ሻይ",   desc:"ሕያው ሂቢስከስ አበባ ጣፋጭ እና ቀናፉ ቀይ መጠጥ ተሠርቷል።"},
+            om:{name:"Shaayii Hibiscus",desc:"Hibiscus gogaa mi'aa fi ititii dhugaatii hoo'aa keessa danfifame."} },
+          { price:110, tags:["Signature"],
+            img:"https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&h=600&fit=crop&q=80",
+            en:{name:"Special Tea",   desc:"Our secret house blend of aromatic spices and premium tea leaves."},
+            am:{name:"ልዩ ሻይ",        desc:"የቤታችን ሚስጥራዊ ቅመማ ቅመም እና ፕሪሚዬም ሻይ ቅጠሎች ድብልቅ።"},
+            om:{name:"Shaayii Addaa", desc:"Idaatii mana keenyaa — shaayii rifeensa mi'aa addaa."} },
+          { price:130, tags:["Signature"],
+            img:"https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&h=600&fit=crop&q=80",
+            en:{name:"Special Tea XL",desc:"A larger, generous serving of our beloved signature spiced tea blend."},
+            am:{name:"ልዩ ሻይ XL",    desc:"ትልቅ ልኬት የቤታችን ምልክት ቅመማ ሻይ ድብልቅ።"},
+            om:{name:"Shaayii Addaa XL",desc:"Seera guddaa shaayii addaa mallatoo mana keenyaa."} },
         ]
       },
       {
-        category: "Cold Drinks", categoryKey: "cold", categoryEmoji: "",
-        items: [
-          { name: "Iced Latte",             price: 230, desc: "Espresso over ice, topped with cold milk.",                      emoji: "🥤", tags: ["Popular"] },
-          { name: "Caramel Iced Latte",     price: 260, desc: "Iced latte drizzled with house caramel sauce.",                  emoji: "🥤", tags: ["Popular"] },
-          { name: "Iced Chocolate Latte",   price: 260, desc: "Espresso, chocolate, and cold milk over ice.",                   emoji: "🥤", tags: [] },
-          { name: "Iced Mocha",             price: 260, desc: "Chilled mocha — espresso, chocolate, milk and ice.",             emoji: "🥤", tags: [] },
-          { name: "Iced Strawberry Latte",  price: 270, desc: "Latte infused with fresh strawberry purée over ice.",            emoji: "🍓", tags: ["New"] },
-          { name: "Iced Matcha Latte",      price: 330, desc: "Ceremonial matcha with cold milk poured over ice.",              emoji: "🍵", tags: ["New"] },
-          { name: "Shaken Hibiscus",        price: 170, desc: "Hibiscus tea shaken with ice for a refreshing tart sip.",       emoji: "🌺", tags: ["Fasting"] },
+        category:{ en:"Cold Drinks", am:"ቀዝቃዛ መጠጦች", om:"Dhugaatii Qorraa" }, categoryKey:"cold",
+        items:[
+          { price:230, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&h=600&fit=crop&q=80",
+            en:{name:"Iced Latte",            desc:"Double espresso poured over ice, finished with cold whole milk."},
+            am:{name:"አይስ ላቴ",               desc:"ድርብ ኤስፕሬሶ ከበረዶ ጋር፣ ቀዝቃዛ ሙሉ ወተት ተጨምሯል።"},
+            om:{name:"Iced Latte",            desc:"Espresso lama barafu irratti, aannan qorraan guutame."} },
+          { price:260, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1593443320739-77f74939d0da?w=600&h=600&fit=crop&q=80",
+            en:{name:"Caramel Iced Latte",    desc:"Iced latte generously drizzled with our slow-cooked house caramel."},
+            am:{name:"ካራሜል አይስ ላቴ",         desc:"ቀስ ብሎ የተሠራ የቤታችን ካራሜል ያለው አይስ ላቴ።"},
+            om:{name:"Caramel Iced Latte",    desc:"Iced latte irra caramel mana keenyaa sirriitti naqame."} },
+          { price:260, tags:[],
+            img:"https://images.unsplash.com/photo-1572490122747-3f55efb1b6e2?w=600&h=600&fit=crop&q=80",
+            en:{name:"Iced Chocolate Latte",  desc:"Espresso, real chocolate syrup and cold milk layered over ice."},
+            am:{name:"አይስ ቸኮሌት ላቴ",         desc:"ኤስፕሬሶ፣ እውነተኛ ቸኮሌት ሲሮፕ እና ቀዝቃዛ ወተት ከበረዶ ጋር።"},
+            om:{name:"Iced Chocolate Latte",  desc:"Espresso, sirop chokolaatii dhugaa fi aannan qorraa barafu irratti."} },
+          { price:260, tags:[],
+            img:"https://images.unsplash.com/photo-1607197109166-e1e0f2506a1a?w=600&h=600&fit=crop&q=80",
+            en:{name:"Iced Mocha",            desc:"Chilled espresso, chocolate, and milk — iced and utterly irresistible."},
+            am:{name:"አይስ ሞካ",               desc:"ቀዝቃዛ ኤስፕሬሶ፣ ቸኮሌት እና ወተት — ቀዝቃዛ እና ማይቋቋሙት።"},
+            om:{name:"Iced Mocha",            desc:"Espresso, chokolaatii fi aannan qorraa barafu irratti."} },
+          { price:270, tags:["New"],
+            img:"https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&h=600&fit=crop&q=80",
+            en:{name:"Iced Strawberry Latte", desc:"Espresso and cold milk swirled with house-made fresh strawberry purée."},
+            am:{name:"አይስ እንጆሪ ላቴ",         desc:"ኤስፕሬሶ እና ቀዝቃዛ ወተት ትኩስ እንጆሪ ፑሬ ጋር ተቀይጧል።"},
+            om:{name:"Iced Strawberry Latte", desc:"Espresso fi aannan qorraa purée strawberry haaraa waliin."} },
+          { price:330, tags:["New"],
+            img:"https://images.unsplash.com/photo-1638176066959-04c1a9fe60bb?w=600&h=600&fit=crop&q=80",
+            en:{name:"Iced Matcha Latte",     desc:"Ceremonial matcha shaken with oat milk and poured over ice."},
+            am:{name:"አይስ ማቻ ላቴ",           desc:"ሴሪሞኒያል ማቻ ከቀዝቃዛ ወተት ጋር ሲናጥ ከበረዶ ላይ ይፈሳል።"},
+            om:{name:"Iced Matcha Latte",     desc:"Matcha ceremonial aannan qorraa waliin marfame barafu irraan."} },
+          { price:170, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1596803244618-8dea2b94aa98?w=600&h=600&fit=crop&q=80",
+            en:{name:"Shaken Hibiscus",       desc:"Hibiscus tea vigorously shaken over ice for a refreshing tart cooler."},
+            am:{name:"ሼክ ሂቢስከስ",            desc:"ሂቢስከስ ሻይ ከበረዶ ጋር ተናጥቶ ቀዝቃዛ ጭልጥ።"},
+            om:{name:"Shaken Hibiscus",       desc:"Shaayii hibiscus barafu irratti marfame dammaqsaa."} },
         ]
       },
       {
-        category: "Shakes & Frappes", categoryKey: "shakes", categoryEmoji: "",
-        items: [
-          { name: "Mocha Frappe",        price: 280, desc: "Blended espresso, chocolate, milk, and crushed ice.",       emoji: "🧋", tags: ["Popular"] },
-          { name: "Caramel Frappe",      price: 270, desc: "Creamy caramel blended with coffee and ice.",               emoji: "🧋", tags: ["Popular"] },
-          { name: "Tiramisu Frappe",     price: 270, desc: "Inspired by the classic dessert — coffee, cocoa, cream.",  emoji: "🧋", tags: ["Signature"] },
-          { name: "Chocolate Frappe",    price: 270, desc: "Rich chocolate blended with milk and ice.",                 emoji: "🧋", tags: [] },
-          { name: "Oreo Milkshake",      price: 350, desc: "Crushed Oreos blended with vanilla ice cream and milk.",   emoji: "🥛", tags: ["Popular"] },
-          { name: "Strawberry Milkshake",price: 340, desc: "Fresh strawberries blended with cold creamy milk.",        emoji: "🍓", tags: [] },
-          { name: "Vanilla Frappe",      price: 270, desc: "Light and creamy vanilla frappe with crushed ice.",         emoji: "🧋", tags: [] },
+        category:{ en:"Shakes & Frappes", am:"ሼኮች እና ፍራፔዎች", om:"Shakes fi Frappes" }, categoryKey:"shakes",
+        items:[
+          { price:280, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1572490122747-3f55efb1b6e2?w=600&h=600&fit=crop&q=80",
+            en:{name:"Mocha Frappe",         desc:"Blended espresso, rich chocolate, whole milk and crushed ice — pure joy."},
+            am:{name:"ሞካ ፍራፔ",             desc:"ኤስፕሬሶ፣ ብዙ ቸኮሌት፣ ወተት እና የተፈጨ በረዶ — ፍጹም ደስታ።"},
+            om:{name:"Mocha Frappe",         desc:"Espresso, chokolaatii badhaadhaa, aannan fi barafu cinqame."} },
+          { price:270, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1551030173-122aaee535ee?w=600&h=600&fit=crop&q=80",
+            en:{name:"Caramel Frappe",       desc:"Smooth caramel blended with fresh coffee and crushed ice."},
+            am:{name:"ካራሜል ፍራፔ",           desc:"ለስላሳ ካራሜል ከቡና እና የተፈጨ በረዶ ጋር ተቀላቅሏል።"},
+            om:{name:"Caramel Frappe",       desc:"Caramel laafaa bunaa fi barafu cinqame waliin masakame."} },
+          { price:270, tags:["Signature"],
+            img:"https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=600&fit=crop&q=80",
+            en:{name:"Tiramisu Frappe",      desc:"All the magic of tiramisu — espresso, mascarpone, and cocoa — blended cold."},
+            am:{name:"ቲራሚሱ ፍራፔ",          desc:"ሁሉም የቲራሚሱ ሙቲ — ኤስፕሬሶ፣ ማስካርፖኔ እና ኮኮዋ — ቀዝቃዛ ሆኖ።"},
+            om:{name:"Tiramisu Frappe",      desc:"Sihrii tiramisu hunda — espresso, mascarpone fi kokoo — qorraan."} },
+          { price:270, tags:[],
+            img:"https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=600&fit=crop&q=80",
+            en:{name:"Chocolate Frappe",     desc:"Double chocolate, blended with whole milk and ice until velvety smooth."},
+            am:{name:"ቸኮሌት ፍራፔ",          desc:"ድርብ ቸኮሌት ከወተት እና በረዶ ጋር ቬልቬቲ ለስልስ ሆኖ ተቀላቅሏል።"},
+            om:{name:"Chocolate Frappe",     desc:"Chokolaatii lama aannan guutuu fi barafu waliin masakame."} },
+          { price:350, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&h=600&fit=crop&q=80",
+            en:{name:"Oreo Milkshake",       desc:"Crushed Oreo cookies blended with vanilla ice cream and cold whole milk."},
+            am:{name:"ኦሪዮ ሚልክሼክ",         desc:"የተፈጨ ኦሪዮ ኩኪ ከቫኒላ አይስ ክሬም እና ቀዝቃዛ ወተት ጋር ተቀላቅሏል።"},
+            om:{name:"Oreo Milkshake",       desc:"Cookie Oreo cinqame vanilla ice cream fi aannan qorraa waliin."} },
+          { price:340, tags:[],
+            img:"https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&h=600&fit=crop&q=80",
+            en:{name:"Strawberry Milkshake", desc:"Sun-ripened strawberries blended to a creamy, vivid pink shake."},
+            am:{name:"እንጆሪ ሚልክሼክ",        desc:"ብስል እንጆሪ ከቀዝቃዛ ክሬሚ ወተት ጋር ሮዝ ሼክ ሆኖ ተቀላቅሏል።"},
+            om:{name:"Strawberry Milkshake", desc:"Strawberry bilcheessee aannan kremii qorraa waliin masakame."} },
+          { price:270, tags:[],
+            img:"https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=600&h=600&fit=crop&q=80",
+            en:{name:"Vanilla Frappe",       desc:"Light, airy vanilla frappe — clean sweetness with a creamy finish."},
+            am:{name:"ቫኒላ ፍራፔ",           desc:"ቀላል ቫኒላ ፍራፔ — ንጹህ ጣዕም ከክሬሚ ማጠናቀቂያ ጋር።"},
+            om:{name:"Vanilla Frappe",       desc:"Frappe vanilla laafaa fi kremii, mi'aa qulqulluu."} },
         ]
       },
       {
-        category: "Juice", categoryKey: "juices", categoryEmoji: "",
-        items: [
-          { name: "Strawberry Juice", price: 260, desc: "Freshly pressed pure strawberry juice.",              emoji: "🍓", tags: ["Popular"] },
-          { name: "Pineapple Juice",  price: 250, desc: "Sweet tropical pineapple, freshly pressed.",          emoji: "🍍", tags: ["Fasting"] },
-          { name: "Orange Juice",     price: 330, desc: "Squeezed fresh every morning.",                       emoji: "🍊", tags: ["Fasting"] },
-          { name: "Mango Juice",      price: 320, desc: "Ripe Ethiopian mango blended smooth.",                emoji: "🥭", tags: ["Popular"] },
-          { name: "Fruit Bowl",       price: 490, desc: "Seasonal mixed fruit bowl, vibrant and refreshing.",  emoji: "🍱", tags: ["Signature"] },
+        category:{ en:"Juice", am:"ጭማቂ", om:"Juusii" }, categoryKey:"juices",
+        items:[
+          { price:260, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&h=600&fit=crop&q=80",
+            en:{name:"Strawberry Juice", desc:"Freshly pressed whole strawberries — pure fruit, nothing added."},
+            am:{name:"የእንጆሪ ጭማቂ",     desc:"ትኩስ የተጨመቀ ሙሉ እንጆሪ — ንጹህ ፍሬ፣ ምንም አልተጨመረ።"},
+            om:{name:"Juusii Strawberry",desc:"Strawberry guutuu haaraa cinnamame — firii qulqulluu."} },
+          { price:250, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=600&h=600&fit=crop&q=80",
+            en:{name:"Pineapple Juice",  desc:"Sweet tropical pineapple freshly pressed, bright and zingy."},
+            am:{name:"የሃናፓፓ ጭማቂ",    desc:"ጣፋጭ ሃሩ ሃናፓፓ ትኩስ የተጨመቀ፣ ብሩህ እና ጣፋጭ።"},
+            om:{name:"Juusii Painaapilii",desc:"Painaapilii mi'aa tropikaalaa haaraa cinnamame."} },
+          { price:330, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&h=600&fit=crop&q=80",
+            en:{name:"Orange Juice",     desc:"Hand-squeezed fresh every morning — the purest start to your day."},
+            am:{name:"የብርቱካን ጭማቂ",   desc:"በየጠዋቱ ትኩስ የተጨመቀ — ቀኑን ለመጀመር ምርጥ።"},
+            om:{name:"Juusii Orenjii",   desc:"Guyyaa hunda ganama haaraa cinnamame — jalqabbii gaarii."} },
+          { price:320, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1615484477778-ca3b77940c25?w=600&h=600&fit=crop&q=80",
+            en:{name:"Mango Juice",      desc:"Ripe Ethiopian mangoes blended ultra-smooth — tropical and luxurious."},
+            am:{name:"የማንጎ ጭማቂ",     desc:"ብስል የኢትዮጵያ ማንጎ ለስልስ ብሎ ተቀላቅሏል — ሃሩ እና ቅንጡ።"},
+            om:{name:"Juusii Maangoo",   desc:"Maangoo Itoophiyaa bilcheessee laaffinnaan masakame."} },
+          { price:490, tags:["Signature"],
+            img:"https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600&h=600&fit=crop&q=80",
+            en:{name:"Fruit Bowl",       desc:"A vibrant seasonal fruit bowl — colourful, refreshing and nourishing."},
+            am:{name:"የፍሬ ሳህን",        desc:"ሕያው ወቅታዊ ፍሬ ሳህን — ቀለማማ፣ ቀዝቃዛ እና ጤናማ።"},
+            om:{name:"Kubbaa Firii",     desc:"Kubbaa firii yeroo dammaqsaa — mi'aawaa fi fayyaa."} },
         ]
       },
       {
-        category: "Mojito", categoryKey: "mojito", categoryEmoji: "",
-        items: [
-          { name: "Hibiscus Mojito",       price: 210, desc: "Hibiscus, fresh mint, lime, and soda water.",             emoji: "🌺", tags: ["Fasting"] },
-          { name: "Cold Brew Mojito",      price: 210, desc: "Cold brew coffee meets mint and lime.",                   emoji: "☕", tags: ["Signature"] },
-          { name: "Strawberry Mojito",     price: 270, desc: "Strawberry purée, mint, lime, and soda.",                 emoji: "🍓", tags: ["Popular"] },
-          { name: "Pineapple Mojito",      price: 260, desc: "Tropical pineapple with mint and lime soda.",             emoji: "🍍", tags: ["Fasting"] },
-          { name: "Orange Mojito",         price: 310, desc: "Freshly squeezed orange with mint and soda.",             emoji: "🍊", tags: [] },
-          { name: "Arda Special Mojito",   price: 330, desc: "Our secret house blend — a must try!",                   emoji: "🌿", tags: ["Signature", "Popular"] },
+        category:{ en:"Mojito", am:"ሞጂቶ", om:"Mojito" }, categoryKey:"mojito",
+        items:[
+          { price:210, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1560508180-03f285f67ded?w=600&h=600&fit=crop&q=80",
+            en:{name:"Hibiscus Mojito",     desc:"Ruby hibiscus, crushed ice, fresh mint, lime and soda — stunning."},
+            am:{name:"ሂቢስከስ ሞጂቶ",       desc:"ቀይ ሂቢስከስ፣ ተፈጨ በረዶ፣ ትኩስ ሰሊጥ፣ ሎሚ እና ሶዳ — ግሩም።"},
+            om:{name:"Mojito Hibiscus",     desc:"Hibiscus ruby, barafu cinqame, nannoo, lime fi soda."} },
+          { price:210, tags:["Signature"],
+            img:"https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=600&h=600&fit=crop&q=80",
+            en:{name:"Cold Brew Mojito",    desc:"12-hour cold brew coffee meets fresh mint and lime soda."},
+            am:{name:"ኮልድ ብሩ ሞጂቶ",     desc:"12 ሰዓት ቀዝቃዛ ቡና ከትኩስ ሰሊጥ እና ሎሚ ሶዳ ጋር ይገናኛሉ።"},
+            om:{name:"Cold Brew Mojito",    desc:"Bunaa qorraa sa'aatii 12 nannoo fi lime soda walitti dhufan."} },
+          { price:270, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&h=600&fit=crop&q=80",
+            en:{name:"Strawberry Mojito",   desc:"House strawberry purée, crushed mint, lime and sparkling soda over ice."},
+            am:{name:"እንጆሪ ሞጂቶ",        desc:"የቤታችን እንጆሪ ፑሬ፣ ሰሊጥ፣ ሎሚ እና ሶዳ ከበረዶ ጋር።"},
+            om:{name:"Mojito Strawberry",   desc:"Purée strawberry, nannoo, lime fi soda sparkling barafu irratti."} },
+          { price:260, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&h=600&fit=crop&q=80",
+            en:{name:"Pineapple Mojito",    desc:"Tropical pineapple juice, mint, lime and effervescent soda."},
+            am:{name:"ሃናፓፓ ሞጂቶ",        desc:"ሃሩ ሃናፓፓ ጭማቂ፣ ሰሊጥ፣ ሎሚ እና ሶዳ።"},
+            om:{name:"Mojito Painaapilii",  desc:"Juusii painaapilii, nannoo, lime fi soda mi'aa."} },
+          { price:310, tags:[],
+            img:"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&h=600&fit=crop&q=80",
+            en:{name:"Orange Mojito",       desc:"Freshly squeezed orange, mint, lime and a generous splash of soda."},
+            am:{name:"ብርቱካን ሞጂቶ",       desc:"ትኩስ ብርቱካን ጭማቂ፣ ሰሊጥ፣ ሎሚ እና ሶዳ።"},
+            om:{name:"Mojito Orenjii",      desc:"Orenjii haaraa, nannoo, lime fi soda guddaa."} },
+          { price:330, tags:["Signature","Popular"],
+            img:"https://images.unsplash.com/photo-1560508180-03f285f67ded?w=600&h=600&fit=crop&q=80",
+            en:{name:"Arda Special Mojito", desc:"Our prized secret house mojito — a blend we'll never reveal. Just try it."},
+            am:{name:"አርዳ ልዩ ሞጂቶ",     desc:"የቤታችን ሚስጥር ሞጂቶ — ምልክታዊ ቅልቅል ማንም አይደፍረው። ይሞክሩ።"},
+            om:{name:"Mojito Addaa Arda",   desc:"Mojito iccitii mana keenyaa — idaatii hin mul'annu. Yaalii."} },
         ]
       },
       {
-        category: "Desserts", categoryKey: "desserts", categoryEmoji: "",
-        items: [
-          { name: "Spaghetti Crepes",          price: 510, desc: "Creative spaghetti-style crepes with sweet fillings. A signature showstopper.",     emoji: "🍝", tags: ["Signature", "Popular"] },
-          { name: "Triple Chocolate Crepes",   price: 560, desc: "Crepes layered with dark, milk, and white chocolate drizzle.",                      emoji: "🍫", tags: ["Signature"] },
-          { name: "Tiramisu",                  price: 265, desc: "Classic Italian mascarpone dessert with espresso-soaked ladyfingers.",              emoji: "🍰", tags: ["Popular"] },
-          { name: "Chocolate Cake",            price: 220, desc: "Moist rich chocolate layer cake with ganache frosting.",                           emoji: "🎂", tags: [] },
-          { name: "Caramel Cake",              price: 220, desc: "Light sponge cake with silky caramel cream layers.",                               emoji: "🎂", tags: [] },
-          { name: "Boxegna",                   price: 180, desc: "Traditional Ethiopian bread served sweet — a local favourite.",                    emoji: "🍞", tags: ["Fasting"] },
-          { name: "White Forest Gateau (F)",   price: 230, desc: "White sponge, cream, and cherries. Available in fasting option.",                  emoji: "🍰", tags: ["Fasting"] },
+        category:{ en:"Desserts", am:"ጣፋጮች", om:"Mi'eessituu" }, categoryKey:"desserts",
+        items:[
+          { price:510, tags:["Signature","Popular"],
+            img:"https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&h=600&fit=crop&q=80",
+            en:{name:"Spaghetti Crepes",        desc:"Our showstopper — thin crepes rolled spaghetti-style with sweet cream filling. Unforgettable."},
+            am:{name:"ስፓጌቲ ክሬፕስ",            desc:"የቤታችን ምልክት — ቀጭን ክሬፕስ ስፓጌቲ ቅርጽ ጣፋጭ ሙሌት ጋር። ማይረሱ።"},
+            om:{name:"Spaghetti Crepes",        desc:"Mallattoo keenya — crepes akka spaghetti mi'aa guutuu. Hin dagatamne."} },
+          { price:560, tags:["Signature"],
+            img:"https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&h=600&fit=crop&q=80",
+            en:{name:"Triple Chocolate Crepes", desc:"Three chocolates — dark, milk and white — layered between silky crepes."},
+            am:{name:"ሦስት ቸኮሌት ክሬፕስ",       desc:"ሦስት ቸኮሌቶች — ጨለማ፣ ወተት እና ነጭ — በለስላሳ ክሬፕስ መካከል ተቀምጠዋል።"},
+            om:{name:"Triple Chocolate Crepes", desc:"Chokolaatii sadii — gurraa, aannan fi adii — crepes laafaa jidduutti."} },
+          { price:265, tags:["Popular"],
+            img:"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&h=600&fit=crop&q=80",
+            en:{name:"Tiramisu",                desc:"Italian classic — espresso-soaked savoiardi, mascarpone cream, cocoa dust."},
+            am:{name:"ቲራሚሱ",                  desc:"ኢጣሊያ ክላሲክ — ኤስፕሬሶ ላዲፊንገር፣ ማስካርፖኔ ክሬም፣ ኮኮዋ ዱቄት።"},
+            om:{name:"Tiramisu",                desc:"Classic Xaaliyaaniti — ladyfinger espresso, cream mascarpone, kokoo."} },
+          { price:220, tags:[],
+            img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=600&fit=crop&q=80",
+            en:{name:"Chocolate Cake",          desc:"Dense, fudgy chocolate layer cake finished with a glossy ganache."},
+            am:{name:"ቸኮሌት ኬክ",              desc:"ወፍራም ቸኮሌት ኬክ ጋናሽ ፍሮስቲንግ ጋር — ፍጹም ምርጫ።"},
+            om:{name:"Keekii Chokolaatii",      desc:"Keekii chokolaatii cimaa ganache gubbaa jiru."} },
+          { price:220, tags:[],
+            img:"https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&h=600&fit=crop&q=80",
+            en:{name:"Caramel Cake",            desc:"Light, airy sponge layered with silky caramel cream and salted toffee."},
+            am:{name:"ካራሜል ኬክ",              desc:"ቀላል ስፖንጅ ከለስላሳ ካራሜል ክሬም እና ጨዋማ ቶፊ ጋር ተቀምጧል።"},
+            om:{name:"Keekii Caramel",          desc:"Keekii sponge laafaa cream caramel fi toffee lolame."} },
+          { price:180, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=600&fit=crop&q=80",
+            en:{name:"Boxegna",                 desc:"Traditional Ethiopian sweet bread — soft, pillowy and deeply local."},
+            am:{name:"ቦጠና",                    desc:"ባህላዊ የኢትዮጵያ ጣፋጭ ዳቦ — ለስሎ፣ ሙሉ እና ባህላዊ።"},
+            om:{name:"Boxegna",                 desc:"Buddeena Itoophiyaa aadaa mi'aa — laafaa fi naannoo."} },
+          { price:230, tags:["Fasting"],
+            img:"https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=600&h=600&fit=crop&q=80",
+            en:{name:"White Forest Gateau (F)", desc:"White sponge, Chantilly cream and cherries — available in fasting form."},
+            am:{name:"ነጭ ፎሬስት ጋቶ (ፍ)",      desc:"ነጭ ስፖንጅ፣ ሻንቲሊ ክሬም እና ቼሪ — የፆም አማራጭ አለ።"},
+            om:{name:"White Forest Gateau (F)", desc:"Sponge adii, cream Chantilly fi cherry — dirqama soommaa."} },
         ]
       },
       {
-        category: "Bottled Drinks", categoryKey: "bottled", categoryEmoji: "",
-        items: [
-          { name: "Soft Drink",  price: 70, desc: "Assorted canned or bottled soft drinks.",  emoji: "🥤", tags: [] },
-          { name: "Water 0.5L", price: 50, desc: "Chilled mineral water, 500ml.",             emoji: "💧", tags: [] },
-          { name: "Water 1L",   price: 60, desc: "Chilled mineral water, 1 litre.",            emoji: "💧", tags: [] },
+        category:{ en:"Bottled Drinks", am:"በጠርሙስ መጠጦች", om:"Dhugaatii Bottolii" }, categoryKey:"bottled",
+        items:[
+          { price:70, tags:[],
+            img:"https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&h=600&fit=crop&q=80",
+            en:{name:"Soft Drink",  desc:"Chilled assorted canned and bottled sodas from our fridge."},
+            am:{name:"ለስላሳ መጠጥ",  desc:"ቀዝቃዛ የተለያዩ ቆርቆሮ እና ጠርሙስ ሶዳዎች ከቀዝቃዛ ቦታ።"},
+            om:{name:"Dhugaatii Laafaa",desc:"Soda qorraa bottle ykn qoqqoodii adda addaa keessaa."} },
+          { price:50, tags:[],
+            img:"https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=600&fit=crop&q=80",
+            en:{name:"Water 500ml", desc:"Chilled premium mineral water, 500ml bottle."},
+            am:{name:"ውሃ 500ml",   desc:"ቀዝቃዛ ፕሪሚዬም ሚኒራሊ ውሃ፣ 500ml ጠርሙስ።"},
+            om:{name:"Bishaan 500ml",desc:"Bishaan mineral ol'aanaa qorraa, bottle 500ml."} },
+          { price:60, tags:[],
+            img:"https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=600&fit=crop&q=80",
+            en:{name:"Water 1L",    desc:"Chilled premium mineral water, full 1 litre bottle."},
+            am:{name:"ውሃ 1ሊ",     desc:"ቀዝቃዛ ፕሪሚዬም ሚኒራሊ ውሃ፣ 1 ሊትር ጠርሙስ።"},
+            om:{name:"Bishaan 1L",  desc:"Bishaan mineral ol'aanaa qorraa, bottle liitira 1."} },
         ]
       },
     ];
 
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    // 🌍 TRANSLATIONS
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    const TRANSLATIONS = {
-      en: {
-        // Nav
-        nav_home: "Home", nav_menu: "Menu", nav_payment: "Payment", nav_about: "About",
-        // Hero
-        welcome_title: "A Place to Savour",
-        welcome_sub: "Fine coffee & sweet moments",
-        // Welcome card
-        welcome_text: `Welcome to <span class="accent-word">AK Digital Marketing</span> — a cozy cafe crafted for those who appreciate good coffee, sweet treats, and refreshing drinks. Every sip, every bite, made with love.`,
-        // Feature cards
-        feat1_title: "Specialty Coffee", feat1_desc: "Ethiopian single-origin beans, expertly brewed.",
-        feat2_title: "Handmade Desserts", feat2_desc: "Fresh daily — crepes, cakes, and more.",
-        feat3_title: "Cool Drinks", feat3_desc: "Frappes, mojitos, juices & shakes.",
-        feat4_title: "Fasting Options", feat4_desc: "Many items available in fasting form.",
-        // CTA
-        cta_menu: "View Menu", cta_about: "About Us",
-        // Footer note
-        footer_note: "(F) — Also available in fasting option. If you have allergy or special dietary requirement, please inform a member of our team. VAT 15% and 5% surcharge is included.",
-        // Menu
-        search_placeholder: "Search menu...",
-        all_items: "All",
-        no_results: "No items found. Try a different search.",
-        // Payment
-        payment_title: "Payment", payment_sub: "Easy ways to pay your bill",
-        pay_seamless: "Seamless Payments",
-        pay_seamless_sub: "We accept multiple convenient payment methods",
-        digital_pay: "Digital Payments",
-        cash_pay: "Cash & Card",
-        cash_desc: "ETB cash accepted · USD at front desk · Visa/Mastercard terminal available",
-        telebirr_sub: "Ethio Telecom Mobile Money",
-        cbe_sub: "Commercial Bank of Ethiopia",
-        recommended: "Recommended",
-        phone_number: "Phone Number",
-        acc_name: "Account Name",
-        acc_number: "Account Number",
-        branch: "Branch",
-        pay_note: "💡 VAT 15% and 5% service charge included in all prices.",
-        scan_pay: "Scan to Pay",
-        // About
-        about_title: "About Us", about_sub: "Our story",
-        about_body: "Welcome to AK Digital Marketing — a cozy cafe crafted for those who appreciate good coffee, sweet treats, and refreshing drinks. Every sip, every bite, made with love.",
-        stat1: "Menu Items", stat2: "Categories", stat3: "Languages", stat4: "Local Love",
-        find_us: "Find Us",
-        choose_language: "Choose Language",
-        // Detail sheet
-        detail_category: "Category",
-        detail_price: "Price",
-        detail_close: "Close",
+    let flatItems = [];
+    MENU.forEach(cat => cat.items.forEach(item => flatItems.push({...item, _cat: cat.category})));
+
+    const TAG_LABELS = {
+      en:{Popular:"Popular",Fasting:"Fasting",Signature:"Signature",New:"New"},
+      am:{Popular:"ታዋቂ",Fasting:"ፆም",Signature:"ምልክት",New:"አዲስ"},
+      om:{Popular:"Beekamaa",Fasting:"Sooma",Signature:"Mallattoo",New:"Haaraa"},
+    };
+
+    const T = {
+      en:{
+        nav_home:"Home",nav_menu:"Menu",nav_payment:"Pay",nav_about:"About",
+        welcome_title:"A Place to Savour",welcome_sub:"Fine coffee & sweet moments",
+        welcome_text:`Welcome to <span class="aw">AK Digital Marketing</span> — a cozy café crafted for those who appreciate great coffee, sweet treats, and refreshing drinks. Every sip, every bite, made with love.`,
+        f1t:"Specialty Coffee",f1d:"Ethiopian single-origin, expertly brewed.",
+        f2t:"Handmade Desserts",f2d:"Fresh daily — crepes, cakes, and more.",
+        f3t:"Cool Drinks",f3d:"Frappes, mojitos, juices & shakes.",
+        f4t:"Fasting Options",f4d:"Many items available in fasting form.",
+        cta_m:"View Menu",cta_a:"About Us",
+        fn:"(F) — Also available in fasting option. Allergy? Please inform our team. VAT 15% + 5% surcharge included.",
+        sp:"Search menu…",all:"All",empty:"No items found — try a different search.",
+        pt:"Payment",ps:"Easy ways to pay your bill",
+        pay_h:"Seamless Payments",pay_hs:"We accept multiple convenient payment methods",
+        dig:"Digital Payments",cash:"Cash & Card",
+        cash_d:"ETB cash · USD at front desk · Visa/Mastercard terminal",
+        tb_s:"Ethio Telecom Mobile Money",cbe_s:"Commercial Bank of Ethiopia",
+        rec:"Recommended",phn:"Phone",an:"Account Name",acc:"Account No.",br:"Branch",
+        pn:"💡 VAT 15% and 5% service charge included in all prices.",
+        as:"Our story",ab:"Welcome to AK Digital Marketing — a cozy café crafted for those who appreciate great coffee, sweet treats, and refreshing drinks.",
+        s1:"Menu Items",s2:"Categories",s3:"Languages",s4:"Local Love",
+        fu:"Find Us",cl:"Choose Language",cp:"Copy",cd:"Copied!",
       },
-      am: {
-        nav_home: "ቤት", nav_menu: "ምናሌ", nav_payment: "ክፍያ", nav_about: "ስለ እኛ",
-        welcome_title: "ለመደሰት ቦታ",
-        welcome_sub: "ጥሩ ቡና እና ጣፋጭ ጊዜዎች",
-        welcome_text: `ወደ <span class="accent-word">AK ዲጂታል ማርኬቲንግ</span> እንኳን ደህና መጡ — ጥሩ ቡና፣ ጣፋጭ ምግቦች እና ቀዝቃዛ መጠጦችን ለሚወዱ የተዘጋጀ ምቹ ካፌ። እያንዳንዱ ጭልጥ፣ እያንዳዱ ንክሻ፣ በፍቅር የተዘጋጀ።`,
-        feat1_title: "ልዩ ቡና", feat1_desc: "የኢትዮጵያ ነጠላ ምንጭ ቡና፣ በሙያ የተፈላ።",
-        feat2_title: "በእጅ የተሠሩ ጣፋጮች", feat2_desc: "በዕለቱ ትኩስ — ክሬፕስ፣ ኬኮች እና ሌሎችም።",
-        feat3_title: "ቀዝቃዛ መጠጦች", feat3_desc: "ፍራፔዎች፣ ሞጂቶዎች፣ ጭማቂዎች እና ሚልክሼኮች።",
-        feat4_title: "የፆም አማራጮች", feat4_desc: "ብዙ ምግቦች በፆም መልኩ ይገኛሉ።",
-        cta_menu: "ምናሌ ይመልከቱ", cta_about: "ስለ እኛ",
-        footer_note: "(ፍ) — የፆም አማራጭ አለ። ለአለርጂ ወይም ልዩ የምግብ ፍላጎት ሰራተኞቹን ያሳውቁ። ቫት 15% + 5% ተካቷል።",
-        search_placeholder: "ፈልግ...",
-        all_items: "ሁሉም",
-        no_results: "ምንም አልተገኘም። ሌላ ቃል ይሞክሩ።",
-        payment_title: "ክፍያ", payment_sub: "ለክፍያ ቀላል መንገዶች",
-        pay_seamless: "ቀላል ክፍያ",
-        pay_seamless_sub: "የተለያዩ ምቹ የክፍያ ዘዴዎችን እንቀበላለን",
-        digital_pay: "ዲጂታል ክፍያ",
-        cash_pay: "ጥሬ ገንዘብ እና ካርድ",
-        cash_desc: "ብር ይቀበላል · ዶላር ዴስክ ላይ · ቪዛ/ማስተርካርድ ተርሚናል አለ",
-        telebirr_sub: "ኢትዮ ቴሌኮም ሞባይል ሙኒ",
-        cbe_sub: "የኢትዮጵያ ንግድ ባንክ",
-        recommended: "የሚመከር",
-        phone_number: "ስልክ ቁጥር",
-        acc_name: "የሂሳብ ስም",
-        acc_number: "የሂሳብ ቁጥር",
-        branch: "ቅርንጫፍ",
-        pay_note: "💡 ቫት 15% እና 5% አገልግሎት ክፍያ በሁሉም ዋጋዎች ውስጥ ተካቷል።",
-        scan_pay: "ለመክፈል ስካን ያድርጉ",
-        about_title: "ስለ እኛ", about_sub: "ታሪካችን",
-        about_body: "ወደ AK ዲጂታል ማርኬቲንግ እንኳን ደህና መጡ — ጥሩ ቡና፣ ጣፋጭ ምግቦች እና ቀዝቃዛ መጠጦችን ለሚወዱ የተዘጋጀ ምቹ ካፌ። እያንዳንዱ ጭልጥ፣ እያንዳዱ ንክሻ፣ በፍቅር የተዘጋጀ።",
-        stat1: "የምናሌ ዕቃዎች", stat2: "ምድቦች", stat3: "ቋንቋዎች", stat4: "አካባቢያዊ ፍቅር",
-        find_us: "ፈልጉን",
-        choose_language: "ቋንቋ ይምረጡ",
-        detail_category: "ምድብ",
-        detail_price: "ዋጋ",
-        detail_close: "ዝጋ",
+      am:{
+        nav_home:"ቤት",nav_menu:"ምናሌ",nav_payment:"ክፍያ",nav_about:"ስለ እኛ",
+        welcome_title:"ለመደሰት ቦታ",welcome_sub:"ጥሩ ቡና እና ጣፋጭ ጊዜዎች",
+        welcome_text:`ወደ <span class="aw">AK ዲጂታል ማርኬቲንግ</span> እንኳን ደህና መጡ — ጥሩ ቡና፣ ጣፋጭ ምግቦች እና ቀዝቃዛ መጠጦችን ለሚወዱ ምቹ ካፌ።`,
+        f1t:"ልዩ ቡና",f1d:"የኢትዮጵያ ነጠላ ምንጭ፣ በሙያ የተፈላ።",
+        f2t:"በእጅ ጣፋጮች",f2d:"ትኩስ — ክሬፕስ፣ ኬኮች እና ሌሎችም።",
+        f3t:"ቀዝቃዛ መጠጦች",f3d:"ፍራፔዎች፣ ሞጂቶዎች፣ ጭማቂዎች።",
+        f4t:"የፆም አማራጮች",f4d:"ብዙ ምግቦች በፆም መልኩ ይገኛሉ።",
+        cta_m:"ምናሌ ይመልከቱ",cta_a:"ስለ እኛ",
+        fn:"(ፍ) — ፆም አማራጭ አለ። ለአለርጂ ሰራተኞቹን ያሳውቁ። ቫት 15%+5% ተካቷል።",
+        sp:"ፈልግ…",all:"ሁሉም",empty:"ምንም አልተገኘም — ሌላ ቃል ይሞክሩ።",
+        pt:"ክፍያ",ps:"ለክፍያ ቀላል መንገዶች",
+        pay_h:"ቀላል ክፍያ",pay_hs:"የተለያዩ ምቹ የክፍያ ዘዴዎችን እንቀበላለን",
+        dig:"ዲጂታል ክፍያ",cash:"ጥሬ ገንዘብ እና ካርድ",
+        cash_d:"ብር · ዶላር ዴስክ ላይ · ቪዛ/ማስተርካርድ ተርሚናል",
+        tb_s:"ኢትዮ ቴሌኮም ሞባይል ሙኒ",cbe_s:"የኢትዮጵያ ንግድ ባንክ",
+        rec:"የሚመከር",phn:"ስልክ",an:"የሂሳብ ስም",acc:"የሂሳብ ቁጥር",br:"ቅርንጫፍ",
+        pn:"💡 ቫት 15% እና 5% አገልግሎት ክፍያ ተካቷል።",
+        as:"ታሪካችን",ab:"ወደ AK ዲጂታል ማርኬቲንግ እንኳን ደህና መጡ — ጥሩ ቡና፣ ጣፋጭ ምግቦች እና ቀዝቃዛ መጠጦችን ለሚወዱ ምቹ ካፌ።",
+        s1:"የምናሌ ዕቃዎች",s2:"ምድቦች",s3:"ቋንቋዎች",s4:"አካባቢያዊ ፍቅር",
+        fu:"ፈልጉን",cl:"ቋንቋ ይምረጡ",cp:"ቅዳ",cd:"ተቀድቷል!",
       },
-      om: {
-        nav_home: "Mana", nav_menu: "Sarara", nav_payment: "Kafaltii", nav_about: "Waa'ee",
-        welcome_title: "Bakka Boqonnaa",
-        welcome_sub: "Bunaa gaarii fi yeroo mi'aa",
-        welcome_text: `Gara <span class="accent-word">AK Digital Marketing</span> baga nagaan dhuftan — bunaa gaarii, mi'eessituu fi dhugaatii qorraa jaallattaniif qophaa'e. Dhugaatii hunda, nyaatii hunda, jaalalaaan qophaa'e.`,
-        feat1_title: "Bunaa Addaa", feat1_desc: "Bunaa Itoophiyaa madda tokko, gahumsa olaanaadhaan.",
-        feat2_title: "Midhaa Harka Irraa", feat2_desc: "Guyyaa hunda haaraa — Crepes, keekii fi kkf.",
-        feat3_title: "Dhugaatii Qorraa", feat3_desc: "Frappees, Mojitos, Juices fi Shakes.",
-        feat4_title: "Dirqama Soommaa", feat4_desc: "Wantoonni baay'een dirqama soommaa ni jiru.",
-        cta_menu: "Sarara Ilaali", cta_about: "Waa'ee Keenya",
-        footer_note: "(F) — Dirqama soommaa ni jira. Hojjattoota beeksisi. VAT 15% + 5% ni dabalamte.",
-        search_placeholder: "Barbaadi...",
-        all_items: "Hunda",
-        no_results: "Homaa hin argamne. Jecha biraa yaalii.",
-        payment_title: "Kafaltii", payment_sub: "Karaalee kafaltii salphaa",
-        pay_seamless: "Kafaltii Salphaa",
-        pay_seamless_sub: "Karaalee kafaltii hedduun ni fudhanna",
-        digital_pay: "Kafaltii Dijitaalii",
-        cash_pay: "Qarshii fi Kaardii",
-        cash_desc: "ETB fudhama · USD meja irratti · Visa/Mastercard terminal jira",
-        telebirr_sub: "Ethio Telecom Mobile Money",
-        cbe_sub: "Baankii Daldalaa Itoophiyaa",
-        recommended: "Kan Gorsamee",
-        phone_number: "Lakkoofsa Bilbilaa",
-        acc_name: "Maqaa Herrega",
-        acc_number: "Lakkoofsa Herrega",
-        branch: "Caasaa",
-        pay_note: "💡 VAT 15% fi kafaltii tajaajilaa 5% gatii hunda keessa jira.",
-        scan_pay: "Kafaltaaf Skaanii",
-        about_title: "Waa'ee Keenya", about_sub: "Seenaa keenya",
-        about_body: "Gara AK Digital Marketing baga nagaan dhuftan — bunaa gaarii, mi'eessituu fi dhugaatii qorraa jaallattaniif qophaa'e. Dhugaatii hunda, nyaatii hunda, jaalalaaan qophaa'e.",
-        stat1: "Wantota Sarara", stat2: "Kutaalee", stat3: "Afaanota", stat4: "Jaallala Naannoo",
-        find_us: "Nu Barbaadi",
-        choose_language: "Afaan Filadhu",
-        detail_category: "Kutaa",
-        detail_price: "Gatii",
-        detail_close: "Cufi",
-      }
+      om:{
+        nav_home:"Mana",nav_menu:"Sarara",nav_payment:"Kafaltii",nav_about:"Waa'ee",
+        welcome_title:"Bakka Boqonnaa",welcome_sub:"Bunaa gaarii fi yeroo mi'aa",
+        welcome_text:`Gara <span class="aw">AK Digital Marketing</span> baga nagaan dhuftan — bunaa gaarii, mi'eessituu fi dhugaatii qorraa jaallattaniif qophaa'e.`,
+        f1t:"Bunaa Addaa",f1d:"Bunaa Itoophiyaa madda tokko, gahumsa olaanaa.",
+        f2t:"Midhaa Harka",f2d:"Guyyaa hunda haaraa — Crepes, keekii fi kkf.",
+        f3t:"Dhugaatii Qorraa",f3d:"Frappees, Mojitos, Juices fi Shakes.",
+        f4t:"Dirqama Soommaa",f4d:"Wantoonni baay'een dirqama soommaa ni jiru.",
+        cta_m:"Sarara Ilaali",cta_a:"Waa'ee Keenya",
+        fn:"(F) — Dirqama soommaa ni jira. VAT 15%+5% ni dabalamte.",
+        sp:"Barbaadi…",all:"Hunda",empty:"Homaa hin argamne — jecha biraa yaalii.",
+        pt:"Kafaltii",ps:"Karaalee kafaltii salphaa",
+        pay_h:"Kafaltii Salphaa",pay_hs:"Karaalee kafaltii hedduun ni fudhanna",
+        dig:"Kafaltii Dijitaalii",cash:"Qarshii fi Kaardii",
+        cash_d:"ETB · USD meja irratti · Visa/Mastercard terminal",
+        tb_s:"Ethio Telecom Mobile Money",cbe_s:"Baankii Daldalaa Itoophiyaa",
+        rec:"Kan Gorsamee",phn:"Bilbila",an:"Maqaa Herrega",acc:"Lakk. Herrega",br:"Caasaa",
+        pn:"💡 VAT 15% fi kafaltii 5% gatii hunda keessa jira.",
+        as:"Seenaa keenya",ab:"Gara AK Digital Marketing baga nagaan dhuftan — bunaa gaarii, mi'eessituu fi dhugaatii qorraa jaallattaniif qophaa'e.",
+        s1:"Wantota Sarara",s2:"Kutaalee",s3:"Afaanota",s4:"Jaallala Naannoo",
+        fu:"Nu Barbaadi",cl:"Afaan Filadhu",cp:"Koppii",cd:"Koppiifame!",
+      },
     };
   </script>
 
   <style>
+    /* ══════════════════════════════════════
+       DESIGN TOKENS
+       Light Almond #EEE5DA / Deep Charcoal #262424
+    ══════════════════════════════════════ */
     :root {
-      --accent: #C0784A;
-      --accent-light: #E8A87C;
-      --accent-dim: rgba(192,120,74,0.15);
-      --accent-dim2: rgba(192,120,74,0.08);
-      --bg: #0d0b09;
-      --bg2: #141210;
-      --surface: #1c1915;
-      --surface2: #231f1a;
-      --surface3: #2a2520;
-      --border: rgba(70,68,68,0.18);
-      --text: #aeaeabe3;
-      --text-dim: rgba(242,236,227,0.55);
-      --text-muted: rgba(242,236,227,0.28);
-      --radius: 16px;
+      --almond:   #EEE5DA;
+      --charcoal: #262424;
+      --accent:   #C0784A;
+      --accent2:  #E8A87C;
+      --adim:     rgba(192,120,74,.12);
+      --adim2:    rgba(192,120,74,.07);
+
+      --bg:       #EEE5DA;
+      --bg2:      #E4D9CC;
+      --card:     #FEFCF9;
+      --card2:    #F5EDE2;
+      --card3:    #EDE3D7;
+      --border:   rgba(38,36,36,.09);
+      --border2:  rgba(38,36,36,.05);
+      --text:     #262424;
+      --dim:      rgba(38,36,36,.56);
+      --muted:    rgba(38,36,36,.34);
+      --shadow:   rgba(38,36,36,.09);
+      --shadow2:  rgba(38,36,36,.05);
+      --r:18px;
     }
-    .light {
-      --bg: #f7f3ee; --bg2: #ede7de; --surface: #ffffff;
-      --surface2: #f5f0e8; --surface3: #ece5d8;
-      --border: rgba(66,64,62,0.18); --text: #1a1410;
-      --text-dim: rgba(26,20,16,0.58); --text-muted: rgba(26,20,16,0.32);
-      --accent-dim: rgba(192,120,74,0.12); --accent-dim2: rgba(192,120,74,0.06);
+    .dark {
+      --bg:#1b1816; --bg2:#141210; --card:#252019; --card2:#2e2820;
+      --card3:#373028; --border:rgba(238,229,218,.09); --border2:rgba(238,229,218,.05);
+      --text:#EEE5DA; --dim:rgba(238,229,218,.58); --muted:rgba(238,229,218,.32);
+      --shadow:rgba(0,0,0,.28); --shadow2:rgba(0,0,0,.16);
     }
-    * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
     html, body { height:100%; background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; overflow:hidden; }
 
-    /* APP SHELL */
-    #app { display:flex; flex-direction:column; height:100dvh; max-width:430px; margin:0 auto; background:var(--bg); overflow:hidden; position:relative; }
+    /* ── SHELL ── */
+    #app { display:flex; flex-direction:column; height:100dvh; max-width:430px; margin:0 auto; background:var(--bg); overflow:hidden; }
 
-    /* TOP BAR */
-    .topbar { display:flex; align-items:center; justify-content:space-between; padding:14px 18px 10px; background:var(--bg); border-bottom:1px solid var(--border); flex-shrink:0; z-index:100; }
-    .topbar-logo { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--accent); letter-spacing:0.04em; }
-    .topbar-sub { font-size:0.58rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-muted); margin-top:-2px; text-align:center; }
-    .topbar-logo-wrap { display:flex; flex-direction:column; align-items:center; }
-    .icon-btn { background:none; border:none; cursor:pointer; color:var(--text-dim); width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:all .2s; font-size:1.1rem; }
-    .icon-btn:hover { background:var(--accent-dim); color:var(--accent); }
-    .lang-btn { background:var(--surface2); border:1px solid var(--border); border-radius:20px; padding:5px 11px; font-size:0.68rem; font-weight:600; letter-spacing:0.06em; color:var(--accent); cursor:pointer; transition:all .2s; }
-    .lang-btn:hover { background:var(--accent-dim); }
+    /* ── TOPBAR ── */
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:14px 18px 11px; background:var(--bg); border-bottom:1px solid var(--border); flex-shrink:0; z-index:60; }
+    .topbar-logo { font-family:'Playfair Display',serif; font-size:1.42rem; font-weight:700; color:var(--accent); letter-spacing:.02em; }
+    .topbar-sub  { font-size:.52rem; text-transform:uppercase; letter-spacing:.16em; color:var(--muted); margin-top:-1px; }
+    .topbar-c    { display:flex; flex-direction:column; align-items:center; }
+    .icon-btn    { background:none; border:none; cursor:pointer; color:var(--muted); width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:all .2s; font-size:.95rem; }
+    .icon-btn:hover { background:var(--adim); color:var(--accent); }
+    .lang-btn    { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:6px 13px; font-size:.66rem; font-weight:600; letter-spacing:.07em; color:var(--accent); cursor:pointer; transition:all .2s; box-shadow:0 1px 6px var(--shadow2); font-family:'DM Sans',sans-serif; }
+    .lang-btn:hover { background:var(--adim); }
 
-    /* CONTENT */
+    /* ── PAGES ── */
     #content { flex:1; overflow:hidden; position:relative; }
-    .page { position:absolute; inset:0; overflow-y:auto; display:none; scroll-behavior:smooth; }
+    .page    { position:absolute; inset:0; overflow-y:auto; display:none; scroll-behavior:smooth; }
     .page.active { display:block; }
-    .page::-webkit-scrollbar { width:3px; }
-    .page::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
-
-    @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+    .page::-webkit-scrollbar { width:2px; }
+    .page::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
     .fade-in { animation:fadeUp .3s ease forwards; }
 
-    /* BOTTOM NAV */
-    .bottomnav { display:flex; justify-content:space-around; align-items:center; background:var(--surface); border-top:1px solid var(--border); padding:8px 0 max(env(safe-area-inset-bottom),8px); flex-shrink:0; }
-    .nav-item { display:flex; flex-direction:column; align-items:center; gap:3px; cursor:pointer; padding:5px 14px; border-radius:12px; color:var(--text-muted); font-size:0.58rem; font-weight:600; text-transform:uppercase; letter-spacing:0.07em; transition:all .2s; }
-    .nav-item svg { width:21px; height:21px; transition:all .2s; }
-    .nav-item.active { color:var(--accent); }
-    .nav-item.active .nav-pip { width:16px; height:3px; background:var(--accent); border-radius:2px; margin-top:1px; }
-    .nav-pip { width:0; height:3px; border-radius:2px; transition:all .2s; }
+    /* ════════════════════════════════
+       FLOATING PILL NAVBAR
+    ════════════════════════════════ */
+    .nav-wrap { padding:10px 16px max(env(safe-area-inset-bottom),13px); background:var(--bg); flex-shrink:0; }
+    .bottomnav { display:flex; align-items:center; background:var(--charcoal); border-radius:32px; padding:6px 6px; box-shadow:0 8px 32px rgba(38,36,36,.22),0 2px 8px rgba(38,36,36,.12); overflow:hidden; }
+    .dark .bottomnav { background:var(--card); box-shadow:0 8px 32px rgba(0,0,0,.4); }
+    .nav-item { display:flex; flex-direction:column; align-items:center; gap:3px; cursor:pointer; padding:8px 0; border-radius:26px; color:rgba(238,229,218,.45); font-size:.55rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; transition:all .28s cubic-bezier(.34,1.2,.64,1); flex:1; }
+    .dark .nav-item { color:var(--muted); }
+    .nav-item svg { width:20px; height:20px; transition:all .25s; stroke:currentColor; }
+    .nav-item.active { background:var(--accent); color:#fff; box-shadow:0 4px 16px rgba(192,120,74,.45); }
+    .nav-item.active svg { stroke:#fff; }
 
-    /* HOME */
-    .hero { position:relative; height:230px; overflow:hidden; }
+    /* ── HOME ── */
+    .hero { position:relative; height:235px; overflow:hidden; }
     .hero img { width:100%; height:100%; object-fit:cover; display:block; }
-    .hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(13,11,9,0.3) 0%,rgba(13,11,9,0.85) 100%); }
-    .hero-content { position:absolute; bottom:0; left:0; right:0; padding:24px 20px; }
-    .hero-title { font-family:'Playfair Display',serif; font-size:2.1rem; font-weight:400; color:#fff; line-height:1.1; }
-    .hero-sub { font-size:0.72rem; color:rgba(255,255,255,0.65); letter-spacing:0.08em; text-transform:uppercase; margin-top:5px; }
-    .welcome-card { margin:16px 16px 0; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 20px; }
-    .welcome-text { font-size:0.82rem; color:var(--text-dim); line-height:1.75; }
-    .accent-word { color:var(--accent); font-weight:600; }
-    .feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 16px 0; }
-    .feat-card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px 14px; }
-    .feat-icon { font-size:1.7rem; margin-bottom:6px; }
-    .feat-title { font-size:0.8rem; font-weight:600; color:var(--text); margin-bottom:3px; }
-    .feat-desc { font-size:0.67rem; color:var(--text-dim); line-height:1.45; }
-    .cta-row { display:flex; gap:10px; padding:16px; }
-    .btn-primary { flex:1; background:var(--accent); color:#fff; border:none; border-radius:12px; padding:14px; font-weight:700; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; transition:opacity .2s; font-family:'DM Sans',sans-serif; }
-    .btn-primary:hover { opacity:.88; }
-    .btn-outline { flex:1; background:transparent; color:var(--accent); border:1.5px solid var(--accent); border-radius:12px; padding:14px; font-weight:600; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background .2s; }
-    .btn-outline:hover { background:var(--accent-dim); }
-    .footer-note { margin:0 16px 20px; padding:14px 16px; background:var(--surface2); border:1px solid var(--border); border-radius:12px; font-size:0.68rem; color:var(--text-muted); line-height:1.65; }
+    .hero-ov { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(38,36,36,.12) 0%,rgba(38,36,36,.72) 100%); }
+    .hero-body { position:absolute; bottom:0; left:0; right:0; padding:22px 22px; }
+    .hero-title { font-family:'Playfair Display',serif; font-size:2.05rem; font-weight:400; color:#EEE5DA; line-height:1.1; }
+    .hero-sub   { font-size:.68rem; color:rgba(238,229,218,.68); letter-spacing:.12em; text-transform:uppercase; margin-top:6px; }
+    .welcome-card { margin:16px 14px 0; background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:18px 20px; box-shadow:0 2px 12px var(--shadow2); }
+    .welcome-text { font-size:.82rem; color:var(--dim); line-height:1.82; }
+    .aw { color:var(--accent); font-weight:600; }
+    .feat-grid { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin:12px 14px 0; }
+    .feat-card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px 14px; box-shadow:0 2px 8px var(--shadow2); }
+    .feat-ic   { font-size:1.55rem; margin-bottom:7px; }
+    .feat-t    { font-size:.79rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+    .feat-d    { font-size:.66rem; color:var(--dim); line-height:1.5; }
+    .cta-row   { display:flex; gap:9px; padding:14px; }
+    .btn-p { flex:1; background:var(--charcoal); color:var(--almond); border:none; border-radius:14px; padding:15px; font-weight:700; font-size:.78rem; letter-spacing:.07em; text-transform:uppercase; cursor:pointer; transition:all .2s; font-family:'DM Sans',sans-serif; box-shadow:0 4px 16px rgba(38,36,36,.18); }
+    .btn-p:hover { opacity:.88; transform:translateY(-1px); }
+    .dark .btn-p { background:var(--accent); color:#fff; box-shadow:0 4px 16px rgba(192,120,74,.35); }
+    .btn-o { flex:1; background:transparent; color:var(--charcoal); border:1.5px solid var(--charcoal); border-radius:14px; padding:15px; font-weight:600; font-size:.78rem; letter-spacing:.07em; text-transform:uppercase; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all .2s; }
+    .btn-o:hover { background:rgba(38,36,36,.07); }
+    .dark .btn-o { color:var(--text); border-color:var(--border); }
+    .footer-note { margin:0 14px 22px; padding:13px 16px; background:var(--card); border:1px solid var(--border); border-radius:12px; font-size:.66rem; color:var(--muted); line-height:1.72; }
 
-    /* MENU */
-    .search-wrap { padding:12px 16px 8px; position:relative; }
-    .search-input { width:100%; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 14px 10px 38px; color:var(--text); font-size:0.82rem; font-family:'DM Sans',sans-serif; outline:none; transition:border-color .2s; }
+    /* ── MENU ── */
+    .search-wrap  { padding:14px 14px 8px; position:relative; }
+    .search-input { width:100%; background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:11px 14px 11px 40px; color:var(--text); font-size:.82rem; font-family:'DM Sans',sans-serif; outline:none; transition:border-color .2s; box-shadow:0 2px 8px var(--shadow2); }
     .search-input:focus { border-color:var(--accent); }
-    .search-input::placeholder { color:var(--text-muted); }
-    .search-icon { position:absolute; left:26px; top:50%; transform:translateY(-50%); color:var(--text-muted); font-size:0.9rem; pointer-events:none; }
-    .cat-tabs { display:flex; gap:8px; padding:4px 16px 12px; overflow-x:auto; scrollbar-width:none; }
+    .search-input::placeholder { color:var(--muted); }
+    .search-icon  { position:absolute; left:27px; top:50%; transform:translateY(-50%); color:var(--muted); font-size:.88rem; pointer-events:none; }
+    .cat-tabs     { display:flex; gap:7px; padding:4px 14px 13px; overflow-x:auto; scrollbar-width:none; }
     .cat-tabs::-webkit-scrollbar { display:none; }
-    .cat-tab { flex-shrink:0; background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:6px 14px; font-size:0.7rem; font-weight:600; letter-spacing:0.04em; color:var(--text-dim); cursor:pointer; transition:all .2s; white-space:nowrap; }
-    .cat-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; }
-    .category-section { margin-bottom:4px; }
-    .cat-header { display:flex; align-items:center; gap:10px; padding:10px 16px 8px; }
-    .cat-header-line { flex:1; height:1px; background:var(--border); }
-    .cat-header-label { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--accent); letter-spacing:0.05em; white-space:nowrap; }
-    .item-list { padding:0 12px; display:flex; flex-direction:column; gap:8px; margin-bottom:10px; }
-    .menu-item { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:13px 14px; display:flex; align-items:center; gap:12px; cursor:pointer; transition:all .2s; user-select:none; }
-    .menu-item:hover { border-color:var(--accent); background:var(--surface2); transform:translateX(2px); }
-    .menu-item:active { transform:scale(0.98); }
-    .item-emoji { width:46px; height:46px; border-radius:10px; background:var(--accent-dim2); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
-    .item-body { flex:1; min-width:0; }
-    .item-name { font-weight:600; font-size:0.86rem; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .item-desc-short { font-size:0.68rem; color:var(--text-dim); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .item-tags { display:flex; gap:4px; margin-top:5px; flex-wrap:wrap; }
-    .tag { font-size:0.58rem; font-weight:700; letter-spacing:0.06em; padding:2px 7px; border-radius:10px; }
-    .tag-popular  { background:rgba(192,120,74,0.18); color:#e0945a; }
-    .tag-fasting  { background:rgba(90,158,111,0.18); color:#6ec08a; }
-    .tag-signature{ background:rgba(139,111,192,0.18); color:#b08ae0; }
-    .tag-new      { background:rgba(58,143,213,0.18);  color:#6ab4f0; }
-    .item-price { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--accent); font-weight:600; flex-shrink:0; }
-    .empty-state { padding:40px 20px; text-align:center; color:var(--text-muted); }
-    .empty-state .e-icon { font-size:2.5rem; margin-bottom:10px; }
-    .empty-state .e-text { font-size:0.82rem; }
+    .cat-tab  { flex-shrink:0; background:var(--card); border:1px solid var(--border); border-radius:22px; padding:7px 15px; font-size:.68rem; font-weight:600; letter-spacing:.04em; color:var(--dim); cursor:pointer; transition:all .22s; white-space:nowrap; box-shadow:0 1px 4px var(--shadow2); }
+    .cat-tab.active { background:var(--charcoal); border-color:var(--charcoal); color:var(--almond); box-shadow:0 3px 12px rgba(38,36,36,.18); }
+    .dark .cat-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .cat-section  { margin-bottom:4px; }
+    .cat-hdr      { display:flex; align-items:center; gap:10px; padding:11px 14px 7px; }
+    .cat-hdr-line { flex:1; height:1px; background:var(--border); }
+    .cat-hdr-lbl  { font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--accent); letter-spacing:.04em; white-space:nowrap; }
 
-    /* DETAIL SHEET */
-    .sheet-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:500; display:none; align-items:flex-end; justify-content:center; backdrop-filter:blur(4px); }
-    .sheet-overlay.open { display:flex; animation:fadeBg .25s ease; }
-    @keyframes fadeBg { from{opacity:0} to{opacity:1} }
-    .sheet { background:var(--surface); border-radius:24px 24px 0 0; width:100%; max-width:430px; padding-bottom:env(safe-area-inset-bottom); border:1px solid var(--border); border-bottom:none; animation:slideUp .3s cubic-bezier(0.34,1.08,0.64,1); overflow:hidden; }
-    @keyframes slideUp { from{transform:translateY(100%)} to{transform:none} }
-    .sheet-handle { width:36px; height:4px; background:var(--border); border-radius:2px; margin:12px auto 0; }
-    .sheet-top-row { display:flex; justify-content:flex-end; padding:8px 16px 0; }
-    .sheet-close-btn { background:var(--surface3); border:none; color:var(--text-dim); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; transition:all .2s; }
-    .sheet-close-btn:hover { background:var(--accent-dim); color:var(--accent); }
-    .sheet-emoji-hero { width:100%; height:140px; display:flex; align-items:center; justify-content:center; font-size:5rem; background:var(--surface2); border-bottom:1px solid var(--border); }
-    .sheet-body { padding:20px 22px 28px; }
-    .sheet-meta { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
-    .sheet-category-badge { font-size:0.62rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); background:var(--accent-dim); border:1px solid var(--border); padding:3px 10px; border-radius:20px; }
-    .sheet-name { font-family:'Playfair Display',serif; font-size:1.65rem; color:var(--text); line-height:1.15; margin-bottom:6px; }
-    .sheet-price { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--accent); font-weight:600; margin-bottom:14px; }
-    .sheet-divider { height:1px; background:var(--border); margin-bottom:14px; }
-    .sheet-desc { font-size:0.85rem; color:var(--text-dim); line-height:1.8; margin-bottom:14px; }
-    .sheet-tags { display:flex; flex-wrap:wrap; gap:6px; }
-    .sheet-tag { font-size:0.65rem; font-weight:700; letter-spacing:0.05em; padding:4px 10px; border-radius:12px; }
+    /* ── MENU ITEM ── */
+    .item-list { padding:0 10px; display:flex; flex-direction:column; gap:9px; margin-bottom:12px; }
+    .menu-item { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:11px; display:flex; align-items:center; gap:13px; cursor:pointer; transition:all .22s; user-select:none; box-shadow:0 2px 8px var(--shadow2); }
+    .menu-item:hover { border-color:var(--accent); box-shadow:0 6px 22px var(--shadow); transform:translateY(-2px); }
+    .menu-item:active { transform:scale(.975); }
+    .item-thumb { width:72px; height:72px; border-radius:13px; overflow:hidden; flex-shrink:0; background:var(--card2); }
+    .item-thumb img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease; }
+    .menu-item:hover .item-thumb img { transform:scale(1.07); }
+    .item-body  { flex:1; min-width:0; }
+    .item-name  { font-weight:600; font-size:.87rem; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .item-desc-s{ font-size:.67rem; color:var(--dim); margin-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .item-tags  { display:flex; gap:4px; margin-top:6px; flex-wrap:wrap; }
+    .tag { font-size:.56rem; font-weight:700; letter-spacing:.05em; padding:2px 7px; border-radius:10px; }
+    .tag-popular   { background:rgba(192,120,74,.13); color:#a85f2e; }
+    .tag-fasting   { background:rgba(60,130,90,.13);  color:#2e7a4e; }
+    .tag-signature { background:rgba(110,70,170,.13); color:#6930a8; }
+    .tag-new       { background:rgba(30,110,200,.13); color:#1560b8; }
+    .dark .tag-popular   { background:rgba(192,120,74,.22); color:#e0945a; }
+    .dark .tag-fasting   { background:rgba(90,158,111,.22); color:#6ec08a; }
+    .dark .tag-signature { background:rgba(139,111,192,.22); color:#b08ae0; }
+    .dark .tag-new       { background:rgba(58,143,213,.22);  color:#6ab4f0; }
+    .item-right { display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0; }
+    .item-price { font-family:'Playfair Display',serif; font-size:1.04rem; color:var(--accent); font-weight:700; }
+    .item-arrow { color:var(--muted); font-size:.75rem; opacity:.6; }
+    .empty-state { padding:52px 20px; text-align:center; color:var(--muted); }
+    .empty-state .ei { font-size:2.4rem; margin-bottom:12px; }
+    .empty-state .et { font-size:.82rem; }
 
-    /* PAYMENT */
-    .page-header { padding:20px 18px 14px; }
-    .ph-title { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:400; }
-    .ph-sub { font-size:0.7rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.07em; margin-top:3px; }
-    .pay-hero { margin:0 14px 16px; background:linear-gradient(135deg,var(--surface2),var(--surface)); border:1px solid var(--border); border-radius:var(--radius); padding:22px; text-align:center; }
-    .pay-hero-icon { font-size:2.4rem; margin-bottom:8px; }
-    .pay-hero-title { font-family:'Playfair Display',serif; font-size:1.45rem; color:var(--accent); }
-    .pay-hero-sub { font-size:0.7rem; color:var(--text-dim); margin-top:4px; }
-    .pay-section { margin:0 14px 10px; }
-    .pay-section-title { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:8px; font-weight:600; }
-    .pay-card { border-radius:14px; border:1px solid var(--border); padding:16px; margin-bottom:10px; }
-    .pay-card-telebirr { background:linear-gradient(135deg,rgba(233,30,140,0.08),rgba(139,91,192,0.08)); border-color:rgba(233,30,140,0.25); }
-    .pay-card-cbe { background:linear-gradient(135deg,rgba(33,150,243,0.08),rgba(13,71,161,0.08)); border-color:rgba(33,150,243,0.25); }
-    .pay-card-cash { background:linear-gradient(135deg,rgba(76,175,80,0.08),rgba(27,94,32,0.08)); border-color:rgba(76,175,80,0.25); }
-    .pay-card-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
-    .pay-card-title { font-weight:700; font-size:0.9rem; }
-    .pay-card-sub { font-size:0.68rem; color:var(--text-dim); margin-top:1px; }
-    .pay-badge { font-size:0.6rem; font-weight:700; letter-spacing:0.08em; color:var(--accent); background:var(--accent-dim); border:1px solid var(--border); padding:3px 8px; border-radius:20px; margin-left:auto; }
-    .pay-row { display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px solid var(--border); font-size:0.75rem; }
+    /* ════════════════════════════════
+       PREMIUM DETAIL SHEET
+    ════════════════════════════════ */
+    .overlay { position:fixed; inset:0; background:rgba(38,36,36,.52); z-index:600; display:none; align-items:flex-end; justify-content:center; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); }
+    .overlay.open { display:flex; animation:fbg .26s ease; }
+    @keyframes fbg { from{opacity:0} to{opacity:1} }
+
+    .sheet { background:var(--card); border-radius:28px 28px 0 0; width:100%; max-width:430px; padding-bottom:max(env(safe-area-inset-bottom),22px); border-top:1px solid var(--border); animation:su .32s cubic-bezier(.34,1.08,.64,1); overflow:hidden; max-height:88dvh; display:flex; flex-direction:column; }
+    @keyframes su { from{transform:translateY(100%)} to{transform:none} }
+
+    .sheet-handle { width:40px; height:4px; background:var(--border); border-radius:2px; margin:14px auto 0; flex-shrink:0; }
+
+    /* hero image in sheet */
+    .sheet-hero { position:relative; height:240px; overflow:hidden; flex-shrink:0; }
+    .sheet-hero img { width:100%; height:100%; object-fit:cover; display:block; }
+    .sheet-hero-ov { position:absolute; inset:0; background:linear-gradient(to bottom,transparent 35%,rgba(38,36,36,.6) 100%); }
+    .sheet-close { position:absolute; top:14px; right:14px; background:rgba(38,36,36,.5); border:none; color:var(--almond); width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:.95rem; display:flex; align-items:center; justify-content:center; transition:all .2s; backdrop-filter:blur(4px); }
+    .sheet-close:hover { background:var(--accent); }
+    .price-pill { position:absolute; bottom:16px; right:16px; background:var(--accent); color:#fff; font-family:'Playfair Display',serif; font-size:1.08rem; font-weight:700; padding:7px 16px; border-radius:22px; box-shadow:0 4px 16px rgba(192,120,74,.45); }
+
+    .sheet-body { padding:20px 22px 24px; overflow-y:auto; flex:1; }
+    .sheet-body::-webkit-scrollbar { width:2px; }
+    .sheet-body::-webkit-scrollbar-thumb { background:var(--border); }
+    .sheet-cat  { display:inline-block; font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); background:var(--adim); border:1px solid rgba(192,120,74,.18); padding:4px 12px; border-radius:20px; margin-bottom:10px; }
+    .sheet-name { font-family:'Playfair Display',serif; font-size:1.7rem; color:var(--text); line-height:1.15; margin-bottom:12px; }
+    .sheet-div  { height:1px; background:var(--border); margin-bottom:14px; }
+    .sheet-desc { font-size:.86rem; color:var(--dim); line-height:1.88; margin-bottom:16px; }
+    .sheet-tags { display:flex; flex-wrap:wrap; gap:7px; }
+    .sheet-tag  { font-size:.64rem; font-weight:700; letter-spacing:.05em; padding:5px 12px; border-radius:12px; }
+
+    /* ── PAYMENT ── */
+    .ph { padding:22px 16px 14px; }
+    .ph h1 { font-family:'Playfair Display',serif; font-size:1.85rem; font-weight:400; }
+    .ph p  { font-size:.69rem; color:var(--dim); text-transform:uppercase; letter-spacing:.07em; margin-top:4px; }
+    .pay-hero-card { margin:0 14px 14px; background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:22px; text-align:center; box-shadow:0 2px 12px var(--shadow2); }
+    .pay-hero-icon { font-size:2.3rem; margin-bottom:8px; }
+    .pay-hero-ttl  { font-family:'Playfair Display',serif; font-size:1.42rem; color:var(--accent); }
+    .pay-hero-sub  { font-size:.69rem; color:var(--dim); margin-top:4px; }
+    .pay-sec { margin:0 14px 10px; }
+    .pay-sec-lbl { font-size:.67rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin-bottom:8px; font-weight:700; }
+    .pay-card { border-radius:16px; border:1px solid var(--border); padding:15px; margin-bottom:10px; background:var(--card); box-shadow:0 2px 10px var(--shadow2); }
+    .pay-card-tb  { background:linear-gradient(135deg,rgba(233,30,140,.05),rgba(139,91,192,.05)); border-color:rgba(233,30,140,.18); }
+    .pay-card-cbe { background:linear-gradient(135deg,rgba(33,150,243,.05),rgba(13,71,161,.05)); border-color:rgba(33,150,243,.18); }
+    .pay-card-cash{ background:linear-gradient(135deg,rgba(76,175,80,.05),rgba(27,94,32,.05)); border-color:rgba(76,175,80,.18); }
+    .pc-hdr { display:flex; align-items:center; gap:10px; margin-bottom:11px; }
+    .pc-title { font-weight:700; font-size:.88rem; }
+    .pc-sub   { font-size:.66rem; color:var(--dim); margin-top:1px; }
+    .pc-badge { font-size:.58rem; font-weight:700; letter-spacing:.08em; color:var(--accent); background:var(--adim); border:1px solid rgba(192,120,74,.18); padding:3px 9px; border-radius:20px; margin-left:auto; }
+    .info-box { background:var(--card2); border-radius:12px; padding:10px 12px; border:1px solid var(--border2); }
+    .pay-row  { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid var(--border2); font-size:.74rem; gap:8px; }
     .pay-row:last-child { border-bottom:none; }
-    .pay-row-label { color:var(--text-dim); }
-    .pay-row-val { font-weight:600; }
-    .pay-info-box { background:var(--surface3); border-radius:10px; padding:10px 12px; }
-    .pay-note-box { margin:0 14px 20px; padding:13px 15px; background:var(--surface); border:1px solid var(--border); border-radius:12px; font-size:0.72rem; color:var(--text-dim); line-height:1.6; }
+    .pr-lbl { color:var(--dim); flex-shrink:0; }
+    .pr-right { display:flex; align-items:center; gap:7px; }
+    .pr-val { font-weight:600; word-break:break-all; }
+    .copy-btn { display:inline-flex; align-items:center; gap:3px; background:var(--adim); border:1px solid rgba(192,120,74,.18); border-radius:8px; padding:3px 9px; font-size:.6rem; font-weight:700; color:var(--accent); cursor:pointer; transition:all .2s; white-space:nowrap; flex-shrink:0; font-family:'DM Sans',sans-serif; }
+    .copy-btn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .copy-btn.done { background:rgba(60,130,90,.13); color:#2e7a4e; border-color:rgba(60,130,90,.25); }
+    .dark .copy-btn.done { background:rgba(90,158,111,.2); color:#6ec08a; border-color:rgba(90,158,111,.3); }
+    .copy-btn svg { width:11px; height:11px; }
+    .pay-note { margin:0 14px 24px; padding:13px 15px; background:var(--card); border:1px solid var(--border); border-radius:12px; font-size:.71rem; color:var(--dim); line-height:1.64; }
 
-    /* ABOUT */
-    .about-img { width:100%; height:185px; object-fit:cover; display:block; }
-    .about-content { padding:0 18px 24px; }
-    .about-name { font-family:'Playfair Display',serif; font-size:2.1rem; color:var(--text); margin-top:18px; }
-    .about-tagline { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin-top:4px; }
-    .about-body { font-size:0.82rem; color:var(--text-dim); line-height:1.8; margin-top:14px; }
-    .stats-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:18px 0; }
-    .stat-card { background:var(--surface); border:1px solid var(--border); border-radius:13px; padding:14px; text-align:center; }
-    .stat-num { font-family:'Playfair Display',serif; font-size:1.9rem; color:var(--accent); }
-    .stat-label { font-size:0.63rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; margin-top:2px; }
-    .section-mini-title { font-family:'Playfair Display',serif; font-size:1.1rem; margin:16px 0 10px; }
-    .contact-item { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); font-size:0.8rem; color:var(--text-dim); }
-    .contact-item:last-child { border-bottom:none; }
-    .contact-icon { width:32px; height:32px; background:var(--accent-dim); border:1px solid var(--border); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0; }
+    /* ── ABOUT ── */
+    .about-img  { width:100%; height:190px; object-fit:cover; display:block; }
+    .about-body-wrap { padding:0 16px 28px; }
+    .about-name { font-family:'Playfair Display',serif; font-size:1.95rem; color:var(--text); margin-top:18px; }
+    .about-tag  { font-size:.68rem; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin-top:5px; }
+    .about-txt  { font-size:.82rem; color:var(--dim); line-height:1.85; margin-top:13px; }
+    .stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin:18px 0; }
+    .stat-c  { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px; text-align:center; box-shadow:0 2px 10px var(--shadow2); }
+    .stat-n  { font-family:'Playfair Display',serif; font-size:1.95rem; color:var(--accent); }
+    .stat-l  { font-size:.6rem; color:var(--muted); text-transform:uppercase; letter-spacing:.09em; margin-top:2px; }
+    .mini-ttl{ font-family:'Playfair Display',serif; font-size:1.08rem; margin:16px 0 11px; }
+    .contact { display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--border2); font-size:.79rem; color:var(--dim); }
+    .contact:last-child { border-bottom:none; }
+    .c-icon  { width:34px; height:34px; background:var(--adim); border:1px solid rgba(192,120,74,.13); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:.88rem; flex-shrink:0; }
 
-    /* LANG MODAL */
-    .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:800; display:none; align-items:flex-end; justify-content:center; backdrop-filter:blur(6px); }
-    .modal-overlay.open { display:flex; }
-    .modal-sheet { background:var(--surface); border-radius:24px 24px 0 0; padding:20px 20px 32px; width:100%; max-width:430px; border:1px solid var(--border); border-bottom:none; animation:slideUp .3s ease; }
-    .modal-handle { width:36px; height:4px; background:var(--border); border-radius:2px; margin:0 auto 18px; }
-    .modal-title { font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:14px; }
-    .lang-opt { display:flex; align-items:center; gap:14px; padding:13px 14px; background:var(--surface2); border:1px solid var(--border); border-radius:12px; margin-bottom:8px; cursor:pointer; transition:all .2s; }
-    .lang-opt:hover, .lang-opt.sel { border-color:var(--accent); background:var(--accent-dim); }
-    .lang-flag { font-size:1.5rem; }
-    .lang-name { font-weight:600; font-size:0.88rem; }
-    .lang-native { font-size:0.7rem; color:var(--text-dim); }
-    .lang-check { margin-left:auto; color:var(--accent); display:none; font-size:1rem; }
-    .lang-opt.sel .lang-check { display:block; }
+    /* ── TOAST ── */
+    .toast { position:fixed; bottom:88px; left:50%; transform:translateX(-50%) translateY(8px); background:var(--card); color:#2e7a4e; border:1.5px solid rgba(60,130,90,.28); border-radius:24px; padding:9px 20px; font-size:.77rem; font-weight:600; letter-spacing:.04em; z-index:9999; opacity:0; transition:all .28s; pointer-events:none; white-space:nowrap; box-shadow:0 6px 24px var(--shadow); }
+    .dark .toast { color:#6ec08a; border-color:rgba(90,158,111,.3); }
+    .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+    /* ── LANG MODAL ── */
+    .lang-ov { position:fixed; inset:0; background:rgba(38,36,36,.45); z-index:900; display:none; align-items:flex-end; justify-content:center; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    .lang-ov.open { display:flex; }
+    .lang-sheet { background:var(--card); border-radius:28px 28px 0 0; padding:20px 18px 36px; width:100%; max-width:430px; border-top:1px solid var(--border); animation:su .3s ease; box-shadow:0 -8px 40px var(--shadow); }
+    .lang-handle { width:40px; height:4px; background:var(--border); border-radius:2px; margin:0 auto 20px; }
+    .lang-ttl { font-family:'Playfair Display',serif; font-size:1.28rem; margin-bottom:14px; }
+    .lang-opt { display:flex; align-items:center; gap:14px; padding:14px 15px; background:var(--card2); border:1px solid var(--border); border-radius:14px; margin-bottom:9px; cursor:pointer; transition:all .2s; }
+    .lang-opt:hover,.lang-opt.sel { border-color:var(--accent); background:var(--adim); }
+    .lang-flag { font-size:1.45rem; }
+    .lang-nm   { font-weight:600; font-size:.87rem; }
+    .lang-nat  { font-size:.68rem; color:var(--dim); }
+    .lang-chk  { margin-left:auto; color:var(--accent); display:none; font-size:.95rem; font-weight:700; }
+    .lang-opt.sel .lang-chk { display:block; }
   </style>
 </head>
-
 <body>
-<div id="app">
 
-  <!-- TOP BAR -->
+<div id="app">
+  <!-- TOPBAR -->
   <div class="topbar">
     <button class="lang-btn" onclick="openLang()" id="lang-pill">🌐 EN</button>
-    <div class="topbar-logo-wrap">
-      <div class="topbar-logo">AK Digital Marketing</div>
-      <div class="topbar-sub" id="restaurant-tagline">Digital Menu</div>
+    <div class="topbar-c">
+      <div class="topbar-logo">AK Digital</div>
+      <div class="topbar-sub">Digital Menu</div>
     </div>
     <button class="icon-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme">🌙</button>
   </div>
 
-  <!-- PAGES -->
   <div id="content">
 
     <!-- HOME -->
     <div class="page active fade-in" id="page-home">
       <div class="hero">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Café" />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <div class="hero-title" id="welcome-title">A Place to Savour</div>
-          <div class="hero-sub" id="welcome-sub">Fine coffee &amp; sweet moments</div>
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Café">
+        <div class="hero-ov"></div>
+        <div class="hero-body">
+          <div class="hero-title" id="ht">A Place to Savour</div>
+          <div class="hero-sub"   id="hs">Fine coffee &amp; sweet moments</div>
         </div>
       </div>
-      <div class="welcome-card">
-        <div class="welcome-text" id="welcome-text"></div>
-      </div>
-      <div class="feature-grid">
-        <div class="feat-card"><div class="feat-icon"></div><div class="feat-title" id="feat1-title">Specialty Coffee</div><div class="feat-desc" id="feat1-desc">Ethiopian single-origin beans, expertly brewed.</div></div>
-        <div class="feat-card"><div class="feat-icon"></div><div class="feat-title" id="feat2-title">Handmade Desserts</div><div class="feat-desc" id="feat2-desc">Fresh daily — crepes, cakes, and more.</div></div>
-        <div class="feat-card"><div class="feat-icon"></div><div class="feat-title" id="feat3-title">Cool Drinks</div><div class="feat-desc" id="feat3-desc">Frappes, mojitos, juices &amp; shakes.</div></div>
-        <div class="feat-card"><div class="feat-icon"></div><div class="feat-title" id="feat4-title">Fasting Options</div><div class="feat-desc" id="feat4-desc">Many items available in fasting form.</div></div>
+      <div class="welcome-card"><div class="welcome-text" id="wt"></div></div>
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-ic">☕</div><div class="feat-t" id="f1t"></div><div class="feat-d" id="f1d"></div></div>
+        <div class="feat-card"><div class="feat-ic">🍰</div><div class="feat-t" id="f2t"></div><div class="feat-d" id="f2d"></div></div>
+        <div class="feat-card"><div class="feat-ic">🧋</div><div class="feat-t" id="f3t"></div><div class="feat-d" id="f3d"></div></div>
+        <div class="feat-card"><div class="feat-ic">🌿</div><div class="feat-t" id="f4t"></div><div class="feat-d" id="f4d"></div></div>
       </div>
       <div class="cta-row">
-        <button class="btn-primary" id="cta-menu" onclick="navigate('menu')">View Menu</button>
-        <button class="btn-outline" id="cta-about" onclick="navigate('about')">About Us</button>
+        <button class="btn-p" id="cta-m" onclick="navigate('menu')">View Menu</button>
+        <button class="btn-o" id="cta-a" onclick="navigate('about')">About Us</button>
       </div>
-      <div class="footer-note" id="footer-note-home"></div>
+      <div class="footer-note" id="fn"></div>
     </div>
 
     <!-- MENU -->
     <div class="page" id="page-menu">
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
-        <input class="search-input" id="search-input" type="text" placeholder="Search menu..." oninput="filterMenu()" />
+        <input class="search-input" id="search-input" type="text" placeholder="Search menu…" oninput="filterMenu()">
       </div>
       <div class="cat-tabs" id="cat-tabs"></div>
       <div id="menu-list"></div>
@@ -495,411 +650,346 @@
 
     <!-- PAYMENT -->
     <div class="page" id="page-payment">
-      <div class="page-header">
-        <div class="ph-title" id="pay-title">Payment</div>
-        <div class="ph-sub" id="pay-sub">Easy ways to pay your bill</div>
-      </div>
-      <div class="pay-hero">
+      <div class="ph"><h1 id="pt"></h1><p id="ps"></p></div>
+      <div class="pay-hero-card">
         <div class="pay-hero-icon">💳</div>
-        <div class="pay-hero-title" id="pay-seamless">Seamless Payments</div>
-        <div class="pay-hero-sub" id="pay-seamless-sub">We accept multiple convenient payment methods</div>
+        <div class="pay-hero-ttl" id="pay_h"></div>
+        <div class="pay-hero-sub" id="pay_hs"></div>
       </div>
-      <div class="pay-section">
-        <div class="pay-section-title" id="pay-digital-title">Digital Payments</div>
+      <div class="pay-sec">
+        <div class="pay-sec-lbl" id="dig"></div>
         <!-- TeleBirr -->
-        <div class="pay-card pay-card-telebirr">
-          <div class="pay-card-header">
-            <div>
-              <div class="pay-card-title">TeleBirr</div>
-              <div class="pay-card-sub" id="pay-telebirr-sub">Ethio Telecom Mobile Money</div>
-            </div>
-            <span class="pay-badge" id="pay-recommended">Recommended</span>
+        <div class="pay-card pay-card-tb">
+          <div class="pc-hdr">
+            <div><div class="pc-title">TeleBirr</div><div class="pc-sub" id="tb_s"></div></div>
+            <span class="pc-badge" id="rec"></span>
           </div>
-          <div class="pay-info-box">
-            <div class="pay-row"><span class="pay-row-label" id="pay-phone-lbl">Phone Number</span><span class="pay-row-val" id="pay-telebirr-number"></span></div>
-            <div class="pay-row"><span class="pay-row-label" id="pay-accname-lbl1">Account Name</span><span class="pay-row-val" id="pay-telebirr-name"></span></div>
+          <div class="info-box">
+            <div class="pay-row">
+              <span class="pr-lbl" id="phn"></span>
+              <div class="pr-right">
+                <span class="pr-val" id="tb-num"></span>
+                <button class="copy-btn" onclick="doCopy('tb-num','cpb-tb')" id="cpb-tb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span id="cpl-tb">Copy</span></button>
+              </div>
+            </div>
+            <div class="pay-row"><span class="pr-lbl" id="an1"></span><div class="pr-right"><span class="pr-val" id="tb-nm"></span></div></div>
           </div>
         </div>
         <!-- CBE -->
         <div class="pay-card pay-card-cbe">
-          <div class="pay-card-header">
-            <div>
-              <div class="pay-card-title">CBE Birr / Bank Transfer</div>
-              <div class="pay-card-sub" id="pay-cbe-sub">Commercial Bank of Ethiopia</div>
+          <div class="pc-hdr"><div><div class="pc-title">CBE Birr / Bank Transfer</div><div class="pc-sub" id="cbe_s"></div></div></div>
+          <div class="info-box">
+            <div class="pay-row">
+              <span class="pr-lbl" id="acc"></span>
+              <div class="pr-right">
+                <span class="pr-val" id="cbe-acc"></span>
+                <button class="copy-btn" onclick="doCopy('cbe-acc','cpb-cbe')" id="cpb-cbe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span id="cpl-cbe">Copy</span></button>
+              </div>
             </div>
-          </div>
-          <div class="pay-info-box">
-            <div class="pay-row"><span class="pay-row-label" id="pay-accnum-lbl">Account Number</span><span class="pay-row-val" id="pay-cbe-account"></span></div>
-            <div class="pay-row"><span class="pay-row-label" id="pay-accname-lbl2">Account Name</span><span class="pay-row-val" id="pay-cbe-name"></span></div>
-            <div class="pay-row"><span class="pay-row-label" id="pay-branch-lbl">Branch</span><span class="pay-row-val" id="pay-cbe-branch"></span></div>
+            <div class="pay-row"><span class="pr-lbl" id="an2"></span><div class="pr-right"><span class="pr-val" id="cbe-nm"></span></div></div>
+            <div class="pay-row"><span class="pr-lbl" id="br"></span><div class="pr-right"><span class="pr-val" id="cbe-br"></span></div></div>
           </div>
         </div>
       </div>
-      <div class="pay-section">
-        <div class="pay-section-title" id="pay-cash-title">Cash &amp; Card</div>
+      <div class="pay-sec">
+        <div class="pay-sec-lbl" id="cash-ttl"></div>
         <div class="pay-card pay-card-cash">
-          <div class="pay-card-header">
-            <div>
-              <div class="pay-card-title" id="pay-cash-card-title">Cash &amp; Card</div>
-              <div class="pay-card-sub" id="pay-cash-desc">ETB cash accepted · USD at front desk · Visa/Mastercard terminal available</div>
-            </div>
-          </div>
+          <div class="pc-hdr"><div><div class="pc-title" id="cash-card-ttl"></div><div class="pc-sub" id="cash-d"></div></div></div>
         </div>
       </div>
-      <div class="pay-note-box" id="pay-note-box"></div>
+      <div class="pay-note" id="pn"></div>
     </div>
 
     <!-- ABOUT -->
     <div class="page" id="page-about">
-      <img class="about-img" src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80" alt="Café Interior" />
-      <div class="about-content">
-        <div class="about-name" id="about-name"></div>
-        <div class="about-tagline" id="about-sub-label">Our story</div>
-        <div class="about-body" id="about-body"></div>
-        <div class="stats-row">
-          <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label" id="stat1">Menu Items</div></div>
-          <div class="stat-card"><div class="stat-num">7</div><div class="stat-label" id="stat2">Categories</div></div>
-          <div class="stat-card"><div class="stat-num">3</div><div class="stat-label" id="stat3">Languages</div></div>
-          <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label" id="stat4">Local Love</div></div>
+      <img class="about-img" src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80" alt="Café Interior">
+      <div class="about-body-wrap">
+        <div class="about-name" id="about-nm"></div>
+        <div class="about-tag" id="about-as"></div>
+        <div class="about-txt" id="about-ab"></div>
+        <div class="stats-grid">
+          <div class="stat-c"><div class="stat-n">50+</div><div class="stat-l" id="s1"></div></div>
+          <div class="stat-c"><div class="stat-n">7</div><div class="stat-l" id="s2"></div></div>
+          <div class="stat-c"><div class="stat-n">3</div><div class="stat-l" id="s3"></div></div>
+          <div class="stat-c"><div class="stat-n">100%</div><div class="stat-l" id="s4"></div></div>
         </div>
-        <div class="section-mini-title" id="find-us-title">Find Us</div>
+        <div class="mini-ttl" id="fu"></div>
         <div id="contact-list"></div>
       </div>
     </div>
 
   </div><!-- /content -->
 
-  <!-- BOTTOM NAV -->
-  <nav class="bottomnav">
-    <div class="nav-item active" id="nav-home" onclick="navigate('home')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span id="nav-home-lbl">Home</span><div class="nav-pip"></div>
-    </div>
-    <div class="nav-item" id="nav-menu" onclick="navigate('menu')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
-      <span id="nav-menu-lbl">Menu</span><div class="nav-pip"></div>
-    </div>
-    <div class="nav-item" id="nav-payment" onclick="navigate('payment')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-      <span id="nav-payment-lbl">Payment</span><div class="nav-pip"></div>
-    </div>
-    <div class="nav-item" id="nav-about" onclick="navigate('about')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <span id="nav-about-lbl">About</span><div class="nav-pip"></div>
-    </div>
-  </nav>
-
+  <!-- FLOATING PILL NAV -->
+  <div class="nav-wrap">
+    <nav class="bottomnav">
+      <div class="nav-item active" id="nav-home" onclick="navigate('home')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span id="nav-home-lbl">Home</span>
+      </div>
+      <div class="nav-item" id="nav-menu" onclick="navigate('menu')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        <span id="nav-menu-lbl">Menu</span>
+      </div>
+      <div class="nav-item" id="nav-payment" onclick="navigate('payment')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <span id="nav-payment-lbl">Pay</span>
+      </div>
+      <div class="nav-item" id="nav-about" onclick="navigate('about')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="nav-about-lbl">About</span>
+      </div>
+    </nav>
+  </div>
 </div><!-- /app -->
 
 <!-- DETAIL SHEET -->
-<div class="sheet-overlay" id="detail-overlay" onclick="handleOverlayClick(event)">
-  <div class="sheet" id="detail-sheet">
+<div class="overlay" id="d-overlay" onclick="overlayClick(event)">
+  <div class="sheet" id="d-sheet">
     <div class="sheet-handle"></div>
-    <div class="sheet-top-row">
-      <button class="sheet-close-btn" onclick="closeDetail()">✕</button>
+    <div class="sheet-hero">
+      <img id="d-img" src="" alt="">
+      <div class="sheet-hero-ov"></div>
+      <button class="sheet-close" onclick="closeDetail()">✕</button>
+      <div class="price-pill" id="d-price"></div>
     </div>
-    <div class="sheet-emoji-hero" id="d-emoji">☕</div>
     <div class="sheet-body">
-      <div class="sheet-meta">
-        <span class="sheet-category-badge" id="d-category"></span>
-      </div>
+      <span class="sheet-cat" id="d-cat"></span>
       <div class="sheet-name" id="d-name"></div>
-      <div class="sheet-price" id="d-price"></div>
-      <div class="sheet-divider"></div>
+      <div class="sheet-div"></div>
       <div class="sheet-desc" id="d-desc"></div>
       <div class="sheet-tags" id="d-tags"></div>
     </div>
   </div>
 </div>
 
-<!-- LANGUAGE MODAL -->
-<div class="modal-overlay" id="lang-modal" onclick="closeLangModal(event)">
-  <div class="modal-sheet">
-    <div class="modal-handle"></div>
-    <div class="modal-title" id="modal-lang-title">Choose Language</div>
-    <div class="lang-opt sel" id="lang-en" onclick="setLang('en')">
-      <span class="lang-flag">🇺🇸</span>
-      <div><div class="lang-name">English</div><div class="lang-native">English</div></div>
-      <span class="lang-check">✓</span>
-    </div>
-    <div class="lang-opt" id="lang-am" onclick="setLang('am')">
-      <span class="lang-flag">🇪🇹</span>
-      <div><div class="lang-name">Amharic</div><div class="lang-native">አማርኛ</div></div>
-      <span class="lang-check">✓</span>
-    </div>
-    <div class="lang-opt" id="lang-om" onclick="setLang('om')">
-      <span class="lang-flag">🇪🇹</span>
-      <div><div class="lang-name">Afan Oromo</div><div class="lang-native">Afaan Oromoo</div></div>
-      <span class="lang-check">✓</span>
-    </div>
+<!-- LANG MODAL -->
+<div class="lang-ov" id="lang-ov" onclick="closeLang(event)">
+  <div class="lang-sheet">
+    <div class="lang-handle"></div>
+    <div class="lang-ttl" id="cl"></div>
+    <div class="lang-opt sel" id="lang-en" onclick="setLang('en')"><span class="lang-flag">🇺🇸</span><div><div class="lang-nm">English</div><div class="lang-nat">English</div></div><span class="lang-chk">✓</span></div>
+    <div class="lang-opt"     id="lang-am" onclick="setLang('am')"><span class="lang-flag">🇪🇹</span><div><div class="lang-nm">Amharic</div><div class="lang-nat">አማርኛ</div></div><span class="lang-chk">✓</span></div>
+    <div class="lang-opt"     id="lang-om" onclick="setLang('om')"><span class="lang-flag">🇪🇹</span><div><div class="lang-nm">Afan Oromo</div><div class="lang-nat">Afaan Oromoo</div></div><span class="lang-chk">✓</span></div>
   </div>
 </div>
 
+<div class="toast" id="toast"></div>
+
 <script>
-  // ── Apply brand colors ──
-  document.documentElement.style.setProperty('--accent', COLORS.accent);
-  document.documentElement.style.setProperty('--accent-light', COLORS.accentLight);
+  /* ── statics ── */
+  document.getElementById('about-nm').textContent = RESTAURANT.name;
+  document.getElementById('tb-num').textContent  = RESTAURANT.telebirrNumber;
+  document.getElementById('tb-nm').textContent   = RESTAURANT.telebirrName;
+  document.getElementById('cbe-acc').textContent = RESTAURANT.cbeAccount;
+  document.getElementById('cbe-nm').textContent  = RESTAURANT.cbeName;
+  document.getElementById('cbe-br').textContent  = RESTAURANT.cbeBranch;
+  document.getElementById('contact-list').innerHTML = [
+    {i:'📍',t:RESTAURANT.address},{i:'📞',t:RESTAURANT.phone},
+    {i:'✉️',t:RESTAURANT.email},{i:'🕐',t:RESTAURANT.hours},
+    {i:'📸',t:RESTAURANT.instagram}
+  ].map(c=>`<div class="contact"><div class="c-icon">${c.i}</div><span>${c.t}</span></div>`).join('');
 
-  // ── Flat item index for safe click handling ──
-  let flatItems = [];
-  MENU.forEach(cat => {
-    cat.items.forEach(item => {
-      flatItems.push({ ...item, category: cat.category });
-    });
-  });
+  /* ── state ── */
+  let lang = 'en', activeCat = 'all', lastIdx = -1, isDark = false;
 
-  // ── Static content ──
-  document.getElementById('about-name').textContent = RESTAURANT.name;
-  document.getElementById('pay-telebirr-number').textContent = RESTAURANT.telebirrNumber;
-  document.getElementById('pay-telebirr-name').textContent = RESTAURANT.telebirrName;
-  document.getElementById('pay-cbe-account').textContent = RESTAURANT.cbeAccount;
-  document.getElementById('pay-cbe-name').textContent = RESTAURANT.cbeName;
-  document.getElementById('pay-cbe-branch').textContent = RESTAURANT.cbeBranch;
+  /* ── helpers ── */
+  const iL = item => item[lang] || item.en;
+  const cL = cat  => cat.category[lang] || cat.category.en;
+  const tL = tag  => (TAG_LABELS[lang]||TAG_LABELS.en)[tag]||tag;
+  const t  = ()  => T[lang]||T.en;
 
-  const contacts = [
-    { icon: '📍', text: RESTAURANT.address },
-    { icon: '📞', text: RESTAURANT.phone },
-    { icon: '✉️', text: RESTAURANT.email },
-    { icon: '🕐', text: RESTAURANT.hours },
-    { icon: '📸', text: RESTAURANT.instagram },
-  ];
-  document.getElementById('contact-list').innerHTML = contacts.map(c =>
-    `<div class="contact-item"><div class="contact-icon">${c.icon}</div><span>${c.text}</span></div>`
-  ).join('');
+  /* ── copy ── */
+  const copyTimers = {};
+  function doCopy(valId, btnId) {
+    const val = document.getElementById(valId).textContent.trim();
+    const tr = t();
+    const finish = () => {
+      const btn = document.getElementById(btnId);
+      const lbl = btn.querySelector('span');
+      btn.classList.add('done'); lbl.textContent = tr.cd;
+      showToast('✓ ' + tr.cd);
+      clearTimeout(copyTimers[btnId]);
+      copyTimers[btnId] = setTimeout(()=>{ btn.classList.remove('done'); lbl.textContent = tr.cp; }, 2200);
+    };
+    navigator.clipboard ? navigator.clipboard.writeText(val).then(finish).catch(finish) : finish();
+  }
+  let toastT;
+  function showToast(msg){
+    const el = document.getElementById('toast');
+    el.textContent = msg; el.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(()=>el.classList.remove('show'),2400);
+  }
 
-  // ── Build Category Tabs ──
-  function buildCategoryTabs() {
-    const t = TRANSLATIONS[currentLang];
-    const wrap = document.getElementById('cat-tabs');
-    wrap.innerHTML = `<div class="cat-tab active" data-cat="all" onclick="selectCat('all',this)">${t.all_items}</div>`;
+  /* ── category tabs ── */
+  function buildTabs(){
+    const tr = t();
+    const w = document.getElementById('cat-tabs');
+    w.innerHTML = `<div class="cat-tab active" data-cat="all" onclick="selectCat('all',this)">${tr.all}</div>`;
     MENU.forEach(cat => {
-      wrap.innerHTML += `<div class="cat-tab" data-cat="${cat.categoryKey}" onclick="selectCat('${cat.categoryKey}',this)">${cat.category}</div>`;
+      w.innerHTML += `<div class="cat-tab" data-cat="${cat.categoryKey}" onclick="selectCat('${cat.categoryKey}',this)">${cL(cat)}</div>`;
     });
   }
 
-  // ── Build Menu List ──
-  function buildMenuList(filterCat = 'all', query = '') {
+  /* ── menu list ── */
+  function buildMenu(cat='all', q=''){
     const list = document.getElementById('menu-list');
-    const t = TRANSLATIONS[currentLang];
-    const q = query.toLowerCase().trim();
-    let html = '';
-    let anyVisible = false;
-    let globalIdx = 0;
+    const tr = t(); const query = q.toLowerCase().trim();
+    let html = '', any = false;
+    let flatIdx = 0; // mirrors flatItems order exactly
 
-    // Rebuild flatItems index aligned with current render order
-    let renderOrder = [];
-
-    MENU.forEach(cat => {
-      if (filterCat !== 'all' && cat.categoryKey !== filterCat) {
-        cat.items.forEach(() => globalIdx++); // keep index in sync
-        return;
-      }
-      const filtered = [];
-      cat.items.forEach((item, localI) => {
-        const idx = flatItems.findIndex(f => f.name === item.name && f.category === cat.category);
-        if (!q || item.name.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q)) {
-          filtered.push({ item, idx });
-        }
+    MENU.forEach(section => {
+      const rows = [];
+      section.items.forEach(item => {
+        const idx = flatIdx++; // always increment, matching flatItems position
+        if(cat!=='all' && section.categoryKey!==cat) return;
+        const loc = iL(item);
+        if(!query || loc.name.toLowerCase().includes(query) || loc.desc.toLowerCase().includes(query) || item.en.name.toLowerCase().includes(query))
+          rows.push({item, idx});
       });
-      if (!filtered.length) return;
-      anyVisible = true;
-
-      html += `<div class="category-section">
-        <div class="cat-header">
-          <div class="cat-header-line"></div>
-          <div class="cat-header-label">${cat.category}</div>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="item-list">`;
-
-      filtered.forEach(({ item, idx }) => {
-        const tagHTML = item.tags.map(tag => {
-          const cls = tag.toLowerCase().replace(/\s+/g, '-');
-          return `<span class="tag tag-${cls}">${tag}</span>`;
-        }).join('');
-
+      if(!rows.length) return;
+      any = true;
+      html += `<div class="cat-section"><div class="cat-hdr"><div class="cat-hdr-line"></div><div class="cat-hdr-lbl">${cL(section)}</div><div class="cat-hdr-line"></div></div><div class="item-list">`;
+      rows.forEach(({item, idx}) => {
+        const loc = iL(item);
+        const tags = item.tags.map(tg=>`<span class="tag tag-${tg.toLowerCase()}">${tL(tg)}</span>`).join('');
         html += `<div class="menu-item" data-idx="${idx}">
-          <div class="item-emoji">${item.emoji}</div>
+          <div class="item-thumb"><img src="${item.img}" alt="${loc.name}" loading="lazy"></div>
           <div class="item-body">
-            <div class="item-name">${item.name}</div>
-            <div class="item-desc-short">${item.desc}</div>
-            ${tagHTML ? `<div class="item-tags">${tagHTML}</div>` : ''}
+            <div class="item-name">${loc.name}</div>
+            <div class="item-desc-s">${loc.desc}</div>
+            ${tags?`<div class="item-tags">${tags}</div>`:''}
           </div>
-          <div class="item-price">ETB ${item.price}</div>
+          <div class="item-right">
+            <div class="item-price">ETB ${item.price}</div>
+            <div class="item-arrow">›</div>
+          </div>
         </div>`;
       });
-
       html += `</div></div>`;
     });
-
-    if (!anyVisible) {
-      html = `<div class="empty-state"><div class="e-icon">🔍</div><div class="e-text">${t.no_results}</div></div>`;
-    }
-
+    if(!any) html = `<div class="empty-state"><div class="ei">🔍</div><div class="et">${tr.empty}</div></div>`;
     list.innerHTML = html;
-
-    // Event delegation — one listener, no inline JS issues
-    list.querySelectorAll('.menu-item').forEach(el => {
-      el.addEventListener('click', () => {
-        const idx = parseInt(el.dataset.idx);
-        openDetail(idx);
-      });
-    });
+    list.querySelectorAll('.menu-item').forEach(el => el.addEventListener('click', () => openDetail(+el.dataset.idx)));
   }
 
-  let activeCat = 'all';
-
-  function selectCat(cat, el) {
+  function selectCat(cat, el){
     activeCat = cat;
-    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.cat-tab').forEach(e=>e.classList.remove('active'));
     el.classList.add('active');
     document.getElementById('search-input').value = '';
-    buildMenuList(cat, '');
+    buildMenu(cat);
   }
-
-  function filterMenu() {
+  function filterMenu(){
     const q = document.getElementById('search-input').value;
-    if (q) {
-      activeCat = 'all';
-      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
-      document.querySelector('[data-cat="all"]').classList.add('active');
-    }
-    buildMenuList(activeCat, q);
+    if(q){ activeCat='all'; document.querySelectorAll('.cat-tab').forEach(e=>e.classList.remove('active')); document.querySelector('[data-cat="all"]').classList.add('active'); }
+    buildMenu(activeCat, q);
   }
 
-  // ── Detail Sheet ──
-  function openDetail(idx) {
-    const item = flatItems[idx];
-    if (!item) return;
-    const t = TRANSLATIONS[currentLang];
-    document.getElementById('d-emoji').textContent = item.emoji;
-    document.getElementById('d-category').textContent = item.category;
-    document.getElementById('d-name').textContent = item.name;
+  /* ── detail ── */
+  function openDetail(idx){
+    const item = flatItems[idx]; if(!item) return;
+    lastIdx = idx;
+    const loc = iL(item), catName = item._cat[lang]||item._cat.en;
+    document.getElementById('d-img').src    = item.img;
+    document.getElementById('d-img').alt    = loc.name;
+    document.getElementById('d-cat').textContent   = catName;
+    document.getElementById('d-name').textContent  = loc.name;
     document.getElementById('d-price').textContent = `ETB ${item.price}`;
-    document.getElementById('d-desc').textContent = item.desc;
-    document.getElementById('d-tags').innerHTML = (item.tags || []).map(tag => {
-      const cls = tag.toLowerCase().replace(/\s+/g, '-');
-      return `<span class="tag sheet-tag tag-${cls}">${tag}</span>`;
-    }).join('');
-    document.getElementById('detail-overlay').classList.add('open');
+    document.getElementById('d-desc').textContent  = loc.desc;
+    document.getElementById('d-tags').innerHTML = (item.tags||[]).map(tg =>
+      `<span class="tag sheet-tag tag-${tg.toLowerCase()}">${tL(tg)}</span>`).join('');
+    document.getElementById('d-overlay').classList.add('open');
+    document.getElementById('d-sheet').scrollTop = 0;
+  }
+  function closeDetail(){ document.getElementById('d-overlay').classList.remove('open'); }
+  function overlayClick(e){ if(e.target===document.getElementById('d-overlay')) closeDetail(); }
+
+  /* ── nav ── */
+  function navigate(page){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+    const el = document.getElementById('page-'+page);
+    el.classList.add('active'); el.classList.remove('fade-in'); void el.offsetWidth; el.classList.add('fade-in');
+    document.getElementById('nav-'+page)?.classList.add('active');
   }
 
-  function closeDetail() {
-    document.getElementById('detail-overlay').classList.remove('open');
+  /* ── translations ── */
+  function applyT(){
+    const tr = t();
+    /* nav */
+    document.getElementById('nav-home-lbl').textContent    = tr.nav_home;
+    document.getElementById('nav-menu-lbl').textContent    = tr.nav_menu;
+    document.getElementById('nav-payment-lbl').textContent = tr.nav_payment;
+    document.getElementById('nav-about-lbl').textContent   = tr.nav_about;
+    /* home */
+    document.getElementById('ht').textContent = tr.welcome_title;
+    document.getElementById('hs').textContent = tr.welcome_sub;
+    document.getElementById('wt').innerHTML   = tr.welcome_text;
+    document.getElementById('f1t').textContent = tr.f1t; document.getElementById('f1d').textContent = tr.f1d;
+    document.getElementById('f2t').textContent = tr.f2t; document.getElementById('f2d').textContent = tr.f2d;
+    document.getElementById('f3t').textContent = tr.f3t; document.getElementById('f3d').textContent = tr.f3d;
+    document.getElementById('f4t').textContent = tr.f4t; document.getElementById('f4d').textContent = tr.f4d;
+    document.getElementById('cta-m').textContent = tr.cta_m;
+    document.getElementById('cta-a').textContent = tr.cta_a;
+    document.getElementById('fn').textContent    = tr.fn;
+    /* menu */
+    document.getElementById('search-input').placeholder = tr.sp;
+    /* payment */
+    document.getElementById('pt').textContent            = tr.pt;
+    document.getElementById('ps').textContent            = tr.ps;
+    document.getElementById('pay_h').textContent         = tr.pay_h;
+    document.getElementById('pay_hs').textContent        = tr.pay_hs;
+    document.getElementById('dig').textContent           = tr.dig;
+    document.getElementById('tb_s').textContent          = tr.tb_s;
+    document.getElementById('rec').textContent           = tr.rec;
+    document.getElementById('phn').textContent           = tr.phn;
+    document.getElementById('an1').textContent           = tr.an;
+    document.getElementById('cbe_s').textContent         = tr.cbe_s;
+    document.getElementById('acc').textContent           = tr.acc;
+    document.getElementById('an2').textContent           = tr.an;
+    document.getElementById('br').textContent            = tr.br;
+    document.getElementById('cash-ttl').textContent      = tr.cash;
+    document.getElementById('cash-card-ttl').textContent = tr.cash;
+    document.getElementById('cash-d').textContent        = tr.cash_d;
+    document.getElementById('pn').textContent            = tr.pn;
+    document.getElementById('cpl-tb').textContent        = tr.cp;
+    document.getElementById('cpl-cbe').textContent       = tr.cp;
+    /* about */
+    document.getElementById('about-as').textContent = tr.as;
+    document.getElementById('about-ab').textContent = tr.ab;
+    document.getElementById('s1').textContent = tr.s1; document.getElementById('s2').textContent = tr.s2;
+    document.getElementById('s3').textContent = tr.s3; document.getElementById('s4').textContent = tr.s4;
+    document.getElementById('fu').textContent = tr.fu;
+    /* lang modal */
+    document.getElementById('cl').textContent = tr.cl;
+    /* pill */
+    document.getElementById('lang-pill').textContent = {en:'🌐 EN',am:'🌐 አማ',om:'🌐 OM'}[lang];
+    /* rebuild menu */
+    buildTabs(); buildMenu(activeCat);
+    /* refresh open detail */
+    if(document.getElementById('d-overlay').classList.contains('open') && lastIdx>=0) openDetail(lastIdx);
   }
 
-  function handleOverlayClick(e) {
-    if (e.target === document.getElementById('detail-overlay')) closeDetail();
+  function setLang(l){
+    lang = l;
+    document.querySelectorAll('.lang-opt').forEach(o=>o.classList.remove('sel'));
+    document.getElementById('lang-'+l).classList.add('sel');
+    applyT();
+    document.getElementById('lang-ov').classList.remove('open');
   }
+  function openLang(){ document.getElementById('lang-ov').classList.add('open'); }
+  function closeLang(e){ if(e.target===document.getElementById('lang-ov')) document.getElementById('lang-ov').classList.remove('open'); }
 
-  // ── Navigation ──
-  function navigate(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-    const el = document.getElementById('page-' + page);
-    el.classList.add('active');
-    el.classList.remove('fade-in');
-    void el.offsetWidth;
-    el.classList.add('fade-in');
-    document.getElementById('nav-' + page)?.classList.add('active');
-  }
-
-  // ── Full Translation Apply ──
-  let currentLang = 'en';
-
-  function applyTranslations() {
-    const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
-
-    // Nav labels
-    document.getElementById('nav-home-lbl').textContent = t.nav_home;
-    document.getElementById('nav-menu-lbl').textContent = t.nav_menu;
-    document.getElementById('nav-payment-lbl').textContent = t.nav_payment;
-    document.getElementById('nav-about-lbl').textContent = t.nav_about;
-
-    // HOME page
-    document.getElementById('welcome-title').textContent = t.welcome_title;
-    document.getElementById('welcome-sub').textContent = t.welcome_sub;
-    document.getElementById('welcome-text').innerHTML = t.welcome_text;
-    document.getElementById('feat1-title').textContent = t.feat1_title;
-    document.getElementById('feat1-desc').textContent = t.feat1_desc;
-    document.getElementById('feat2-title').textContent = t.feat2_title;
-    document.getElementById('feat2-desc').textContent = t.feat2_desc;
-    document.getElementById('feat3-title').textContent = t.feat3_title;
-    document.getElementById('feat3-desc').textContent = t.feat3_desc;
-    document.getElementById('feat4-title').textContent = t.feat4_title;
-    document.getElementById('feat4-desc').textContent = t.feat4_desc;
-    document.getElementById('cta-menu').textContent = t.cta_menu;
-    document.getElementById('cta-about').textContent = t.cta_about;
-    document.getElementById('footer-note-home').textContent = t.footer_note;
-
-    // MENU search
-    document.getElementById('search-input').placeholder = t.search_placeholder;
-
-    // PAYMENT page
-    document.getElementById('pay-title').textContent = t.payment_title;
-    document.getElementById('pay-sub').textContent = t.payment_sub;
-    document.getElementById('pay-seamless').textContent = t.pay_seamless;
-    document.getElementById('pay-seamless-sub').textContent = t.pay_seamless_sub;
-    document.getElementById('pay-digital-title').textContent = t.digital_pay;
-    document.getElementById('pay-telebirr-sub').textContent = t.telebirr_sub;
-    document.getElementById('pay-recommended').textContent = t.recommended;
-    document.getElementById('pay-phone-lbl').textContent = t.phone_number;
-    document.getElementById('pay-accname-lbl1').textContent = t.acc_name;
-    document.getElementById('pay-cbe-sub').textContent = t.cbe_sub;
-    document.getElementById('pay-accnum-lbl').textContent = t.acc_number;
-    document.getElementById('pay-accname-lbl2').textContent = t.acc_name;
-    document.getElementById('pay-branch-lbl').textContent = t.branch;
-    document.getElementById('pay-cash-title').textContent = t.cash_pay;
-    document.getElementById('pay-cash-card-title').textContent = t.cash_pay;
-    document.getElementById('pay-cash-desc').textContent = t.cash_desc;
-    document.getElementById('pay-note-box').textContent = t.pay_note;
-
-    // ABOUT page
-    document.getElementById('about-sub-label').textContent = t.about_sub;
-    document.getElementById('about-body').textContent = t.about_body;
-    document.getElementById('stat1').textContent = t.stat1;
-    document.getElementById('stat2').textContent = t.stat2;
-    document.getElementById('stat3').textContent = t.stat3;
-    document.getElementById('stat4').textContent = t.stat4;
-    document.getElementById('find-us-title').textContent = t.find_us;
-
-    // Language modal title
-    document.getElementById('modal-lang-title').textContent = t.choose_language;
-
-    // Lang pill label
-    const pills = { en: '🌐 EN', am: '🌐 አማ', om: '🌐 OM' };
-    document.getElementById('lang-pill').textContent = pills[currentLang];
-
-    // Rebuild menu UI
-    buildCategoryTabs();
-    buildMenuList(activeCat, '');
-  }
-
-  // ── Language ──
-  function setLang(lang) {
-    currentLang = lang;
-    document.querySelectorAll('.lang-opt').forEach(o => o.classList.remove('sel'));
-    document.getElementById('lang-' + lang).classList.add('sel');
-    applyTranslations();
-    document.getElementById('lang-modal').classList.remove('open');
-  }
-
-  function openLang() { document.getElementById('lang-modal').classList.add('open'); }
-  function closeLangModal(e) {
-    if (e.target === document.getElementById('lang-modal'))
-      document.getElementById('lang-modal').classList.remove('open');
-  }
-
-  // ── Theme ──
-  let isDark = true;
-  function toggleTheme() {
+  /* ── theme ── */
+  function toggleTheme(){
     isDark = !isDark;
-    document.body.classList.toggle('light', !isDark);
-    document.getElementById('theme-btn').textContent = isDark ? '🌙' : '☀️';
+    document.body.classList.toggle('dark', isDark);
+    document.getElementById('theme-btn').textContent = isDark ? '☀️' : '🌙';
   }
 
-  // ── INIT ──
-  applyTranslations();
+  /* ── INIT ── */
+  applyT();
 </script>
 </body>
 </html>
